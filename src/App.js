@@ -1,4 +1,4 @@
-import {BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./pages/Routes/Nav";
 import Footer from "./pages/Routes/Footer";
 import Home from "./pages/Home";
@@ -7,16 +7,15 @@ import Detail from "./pages/Detail";
 import User from "./pages/User";
 
 function App() {
-  
   return (
     <Router>
       <div>
         <Nav />
         <Switch>
-        <Route path="/" exact>
+          <Route path="/" exact>
             <Home />
           </Route>
-          <Route path="/search" >
+          <Route path="/search">
             <Search />
           </Route>
           <Route path="/detail">
