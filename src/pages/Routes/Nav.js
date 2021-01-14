@@ -2,13 +2,6 @@ import { Link } from "react-router-dom";
 import styles from "./styles/_nav.module.scss";
 import logo from "./img/logo.png";
 
-function onClickMenu() {
-  document.getElementById("menu").classList.toggle("change");
-  document.getElementById("nav").classList.toggle("change");
-
-  document.getElementById("menu-bg").classList.toggle("change-bg");
-}
-
 const Nav = () => {
   return (
     <div className={styles.navContainer}>
