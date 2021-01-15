@@ -1,0 +1,23 @@
+.searchBar{
+    margin:200px 0 50px 100px;
+
+}
+.barBtn{
+    position: relative;
+    margin-left: -20px;
+}
+
+.searchInput{
+    height: 30px;
+    width: 250px;
+    font-size: 1.2rem;
+    font-family: Arial, Helvetica, sans-serif;
+    border:1px solid gray;
+    border-radius: 10px;
+    padding-left: 10px;
+}
+
+.searchInput:focus{
+    outline: none;
+    
+}
