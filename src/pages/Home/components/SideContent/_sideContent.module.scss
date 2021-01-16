@@ -1,0 +1,18 @@
+.sideContent{
+    display:flex;
+    flex-direction: column;
+    text-align: center;
+    margin-top: 70px;
+    height: 100%;
+    width: 45%;
+}
+
+.mainImg{
+    max-width: 80%;
+    height: auto;
+    margin:0 auto;
+}
+
+.mainHeader{
+    margin-bottom: 50px;
+}
