@@ -13,17 +13,6 @@ export const infos = {
     "1 cup canola oil",
     "1 clove garlic, grated on a microplane grater",
     "2 teaspoons juice from 1 lemon",
-    "2 teaspoons dijon or whole grain mustard",
-    "Kosher salt",
-    "For the Tomato Sauce",
-    "2 tablespoons extra virgin olive oil",
-    "1 clove garlic, grated on a microplane grater",
-    "1/4 teaspoon red pepper flakes",
-    "1/2 teaspoon dried oregano leaves",
-    "For the Eggplant",
-    "1/2 cup all-purpose flour",
-    "1/2 cup water",
-    "4 slices pizza bianca or other sandwich bread, lightly toasted"
   ],
   nutrition: [
     {
