@@ -16,7 +16,7 @@ const Ingredients = ({ ingredients, url }) => {
           </div>
         );
       })}
-      <hr />
+      <hr className={styles["bottom-hr"]} />
       <div className={styles["footer-container"]}>
         <a
           href={url}

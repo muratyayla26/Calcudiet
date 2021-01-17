@@ -3,7 +3,8 @@
 .container {
   border: 1px solid rgba(0, 0, 0, 0.35);
   height: fit-content;
-  min-width: 500px;
+  max-width: 48%;
+  min-width: 42%;
   margin-right: 0px;
   border-radius: 25px;
   box-shadow: 8px 8px 6px -6px black;
@@ -27,9 +28,16 @@
   font-size: $primary-font-size;
 }
 
-hr {
+.top-hr {
+  margin: auto auto 10px auto;
   width: 75%;
 }
+.special-hr {
+  margin: 10px auto 10px auto;
+}
+
+.bottom-hr {
+  margin: 10px auto 20px auto;}
 
 .calory-container {
   display: flex;
@@ -87,6 +95,7 @@ hr {
 }
 
 .line-container {
+  overflow: hidden;
   display: flex;
   justify-content: space-between;
   padding: 0;

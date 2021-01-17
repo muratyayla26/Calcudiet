@@ -1,6 +1,6 @@
 export const infos = {
   name: "Fried Eggplant Sandwich With Eggplant Mayo Recipe",
-  allergic: "Sulfities",
+  allergic: "sulfities",
   calory: 4450.137284518651,
   service: 14,
   url:
@@ -23,7 +23,7 @@ export const infos = {
     "For the Eggplant",
     "1/2 cup all-purpose flour",
     "1/2 cup water",
-    "4 slices pizza bianca or other sandwich bread, lightly toasted",
+    "4 slices pizza bianca or other sandwich bread, lightly toasted"
   ],
   nutrition: [
     {

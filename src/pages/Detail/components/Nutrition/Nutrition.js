@@ -23,7 +23,7 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
       <div className={styles["header-container"]}>
         <p className={styles.header}>Nutrition</p>
       </div>
-      <hr />
+      <hr className={styles["top-hr"]} />
       <div className={styles["calory-container"]}>
         <div className={styles["calory-serving"]}>
           <p>Servings</p>
@@ -40,7 +40,7 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
           <p>{Math.ceil(Math.ceil(calory) / newService)}</p>
         </div>
       </div>
-      <hr />
+      <hr className={styles["special-hr"]}/>
       <div>
         {allergic && (
           <div>
@@ -51,7 +51,7 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
               />
               <p>Allergen: {allergic}</p>
             </div>
-            <hr />
+            <hr className={styles["bottom-hr"]}/>
           </div>
         )}
       </div>
