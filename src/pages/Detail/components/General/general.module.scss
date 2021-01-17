@@ -1,0 +1,97 @@
+@import "../../config.module";
+
+.container {
+  border: 1px solid rgba(0, 0, 0, 0.35);
+  box-shadow: 8px 8px 6px -6px black;
+  border-radius: 25px;
+  display: flex;
+  width: 100%;
+  font-family: $font-stack;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.img-container {
+  img {
+    max-width: 400px;
+    max-height: 400px;
+    border-radius: 25px;
+  }
+}
+
+.text-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.name {
+  font-size: $primary-font-size;
+  font-weight: $primary-weight;
+}
+
+.footer {
+  display: flex;
+  margin: auto auto 0 auto;
+  width: 100%;
+  justify-content: space-around;
+}
+
+.add-list {
+  width: 140px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: $primary-color;
+  cursor: pointer;
+
+  .faIcon {
+    font-size: 26px;
+  }
+
+  span {
+    font-size: $secondary-font-size;
+    font-weight: $primary-weight;
+  }
+}
+
+.see-instructions {
+  text-decoration: none;
+  width: 155px;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  color: $primary-color;
+  cursor: pointer;
+
+  .faIcon {
+    font-size: 25px;
+  }
+
+  span {
+    font-size: $secondary-font-size;
+    font-weight: $primary-weight;
+  }
+}
+
+.share-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 160px;
+  height: 50px;
+
+  .faIcon {
+    font-size: 30px;
+    transition: all 0.3s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.1);
+    }
+  }
+
+  .faShare {
+    font-size: 25px;
+  }
+}

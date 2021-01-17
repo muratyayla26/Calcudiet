@@ -1,0 +1,12 @@
+@import "config.module";
+
+.container {
+  width: 1300px;
+  margin: auto;
+}
+
+.sub-container {
+  margin: 50px 0 50px 0;
+  display: flex;
+  justify-content: space-between;
+}

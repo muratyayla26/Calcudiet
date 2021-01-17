@@ -7,6 +7,7 @@ import Detail from "./pages/Detail";
 import User from "./pages/User";
 
 function App() {
+
   return (
     <Router>
       <div>
