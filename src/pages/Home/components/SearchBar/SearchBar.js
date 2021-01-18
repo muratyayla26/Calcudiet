@@ -14,6 +14,7 @@ function SearchBar({fetch}) {
                 <input type='text' className={styles.searchInput}value={inputValue} onChange={(e)=>setInputValue(e.target.value)} placeholder="Search"/>
                 <span type='submit'  className={styles.barBtn}><FontAwesomeIcon icon={faSearch} /></span>
             </form>
+            <a href='#' className={styles.viewMore}>View more...</a>
         </div>
     )
 }
