@@ -10,3 +10,19 @@
     display:flex;
     justify-content: space-between;
 }
+
+@media only screen and (max-width: 500px) {
+    .mainContent{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+}
+
+
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+    .mainContent{
+        display:flex;
+        flex-direction: column-reverse;
+    }
+}
+

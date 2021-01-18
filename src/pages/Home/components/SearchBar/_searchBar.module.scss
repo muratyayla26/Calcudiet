@@ -1,5 +1,6 @@
 .searchBar{
-    margin:200px 0 50px 100px;
+    margin:200px 0 50px 30%;
+    position: relative;
 
 }
 .barBtn{
@@ -20,4 +21,29 @@
 .searchInput:focus{
     outline: none;
     
+}
+
+@media only screen and (max-width: 500px) {
+.searchBar{
+    width: 70%;
+    margin:auto;
+    margin-top: 10px;
+}
+
+.searchInput{
+    width: 100%;
+}
+}
+
+@media only screen  and (max-width: 992px) {
+.searchBar{
+    width: 70%;
+    margin: 0px 0px;
+    margin:auto;
+    margin-top: 10px;
+}
+.searchInput{
+    width: 100%;
+}
+
 }
