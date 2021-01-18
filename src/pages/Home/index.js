@@ -1,8 +1,8 @@
 import styles from "./styles/_index.module.scss";
-import './styles/animate.css'
+import "./styles/animate.css";
 import FetchData from "./components/FoodDataList/FetchData";
 import SideContent from "./components/SideContent/SideContent";
-import About from "./components/About/About"
+import About from "./components/About/About";
 
 const Home = () => {
   return (
@@ -11,8 +11,7 @@ const Home = () => {
         <FetchData />
         <SideContent />
       </div>
-      <About/>
-
+      <About />
     </div>
   );
 };

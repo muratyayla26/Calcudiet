@@ -2,7 +2,7 @@ import styles from "./_foodDataList.module.scss";
 import like from "../../img/like.png";
 import plate from "../../img/plate.png";
 
-function FoodCard({data }) {
+function FoodCard({ data }) {
   return (
     <li className={styles.foodCard}>
       <div className={styles.cardHeader}>

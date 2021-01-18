@@ -1,61 +1,55 @@
-.searchBar{
-    margin:200px 0 50px 30%;
-    position: relative;
-    width:250px;
-    height: auto;
-
+.searchBar {
+  margin: 200px 0 50px 30%;
+  position: relative;
+  width: 250px;
+  height: auto;
 }
-.barBtn{
-    position: relative;
-    margin-left: -20px;
-}
-
-
-.searchInput{
-    height: 30px;
-    width: 100%;
-    font-size: 1.2rem;
-    font-family: Arial, Helvetica, sans-serif;
-    border:1px solid gray;
-    border-radius: 10px;
-    padding-left: 10px;
-    margin-bottom: 10px;
+.barBtn {
+  position: relative;
+  margin-left: -20px;
 }
 
-.searchInput:focus{
-    outline: none;
-    
+.searchInput {
+  height: 30px;
+  width: 100%;
+  font-size: 1.2rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border: 1px solid gray;
+  border-radius: 10px;
+  padding-left: 10px;
+  margin-bottom: 10px;
 }
 
-.viewMore{
-    margin-left: 60%;
-    color:green;
-    font-size: 1rem;
-    font-weight: bold;
-    text-decoration: none;
+.searchInput:focus {
+  outline: none;
+}
+
+.viewMore {
+  margin-left: 60%;
+  color: green;
+  font-size: 1rem;
+  font-weight: bold;
+  text-decoration: none;
 }
 
 @media only screen and (max-width: 500px) {
-.searchBar{
-
-    margin:auto;
+  .searchBar {
+    margin: auto;
     margin-top: 10px;
-}
+  }
 
-.searchInput{
+  .searchInput {
     width: 100%;
-}
+  }
 }
 
-@media only screen  and (max-width: 992px) {
-.searchBar{
-
+@media only screen and (max-width: 992px) {
+  .searchBar {
     margin: 0px 0px;
-    margin:auto;
+    margin: auto;
     margin-top: 10px;
-}
-.searchInput{
+  }
+  .searchInput {
     width: 100%;
-}
-
+  }
 }
