@@ -24,7 +24,7 @@ function About() {
       <div className={`${styles.aboutContainer}`}>
         <img src={foods} />
 
-        <h2 className={`${styles.homehead} home-about-head` }>
+        <h2 className={`${styles.aboutHeader} home-about-head` }>
           About Us
         </h2>
         <p className='home-about-paragraph'>
