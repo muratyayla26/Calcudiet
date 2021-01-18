@@ -1,5 +1,6 @@
 import { search } from "./utility/edamam";
 import { useState, useEffect } from "react";
+import { useRouteMatch } from "react-router-dom";
 import styles from "./styles/index.module.scss";
 import General from "./components/General/General";
 import { infos } from "./utility/temporary";
@@ -9,12 +10,13 @@ import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
 
 const Detail = () => {
+  const { params } = useRouteMatch();
+  console.log(params.id);
   const [recipe, setRecipe] = useState(infos);
   const [loading, setLoading] = useState(false);
-  console.log("index render oldu");
   /*
   useEffect(() => {
-    search("75e4ca97121992820cc6e246bd16b866").then((response) => {
+    search(params.id).then((response) => {
       setRecipe(response);
       setLoading(false);
     });
@@ -45,3 +47,6 @@ const Detail = () => {
 };
 
 export default Detail;
+/*
+path="/detail/:id" bu yol app.jste route eklenecek
+<Link to={`/detail/${itemin_apiden gelen_Idsi}`}> tıklanılacak yere link verilecek*/
