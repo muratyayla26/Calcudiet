@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import foods from "../../img/foods.png";
 import styles from "./_about.module.scss";
+import Popup from 'reactjs-popup';
 
 function About() {
   useEffect(() => {
@@ -35,6 +36,7 @@ function About() {
           reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
           pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
           culpa qui officia deserunt mollit anim id est laborum.
+          
         </p>
       </div>
     </div>
