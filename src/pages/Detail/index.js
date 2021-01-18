@@ -14,11 +14,12 @@ const Detail = () => {
   const [loading, setLoading] = useState(false);
   /*
   useEffect(() => {
-    search("f2033611488164ec5c41449a2450df2c").then((response) => {
+    search("763b4b1ced75faae48164b68ee9e3fad").then((response) => {
       setRecipe(response);
       setLoading(false);
     });
-  }, []);*/
+  }, []);
+*/
   return (
     <div>
       {loading ? (

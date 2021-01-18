@@ -15,11 +15,14 @@ export const search = async (inputId) => {
       name: data[0].label,
       image: data[0].image,
       url: data[0].url,
-      allergic: data[0].cautions[0] || "",
+      allergic:
+        data[0].cautions.length === 0 || data[0].cautions[0] === "FODMAP"
+          ? ""
+          : data[0].cautions[0],
       ingredients: data[0].ingredientLines,
-      service: data[0].yield,
-      calory: data[0].calories,
-      nutrition: data[0].digest,
+      service: data[0].yield || 1, //number
+      calory: data[0].calories, //number
+      nutrition: data[0].digest, //total: number geliyor
       id: data[0].uri.split("_")[1],
     };
 

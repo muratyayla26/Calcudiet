@@ -13,7 +13,7 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (e.target.service.value > 0) {
+    if (e.target.service.value > 0 && e.target.service.value < 50) {
       setNewService(e.target.service.value);
     }
   };
@@ -60,7 +60,7 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
         return (
           <div key={index} className={styles["line-container"]}>
             <p>{item.label}</p>
-            <p>{`${Math.ceil(Math.ceil(item.total) / newService)} ${
+            <p>{`${Math.ceil((Math.ceil(item.total) || 0) / newService)} ${
               item.unit
             }`}</p>
           </div>
