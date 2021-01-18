@@ -1,3 +1,4 @@
+import { addToStore } from "../../../../utility/addToStore";
 import styles from "./general.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faListUl } from "@fortawesome/free-solid-svg-icons";
@@ -8,21 +9,25 @@ import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
 import { faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
 
-const General = ({ image, name, url }) => {
+const General = ({ recipe }) => {
+  const clickHandler = () => {
+    addToStore(recipe);
+  };
+
   return (
     <div className={styles.container}>
       <div className={styles["img-container"]}>
-        <img src={image} alt="meal" />
+        <img src={recipe.image} alt="meal" />
       </div>
       <div className={styles["text-container"]}>
-        <p className={styles.name}>{name}</p>
+        <p className={styles.name}>{recipe.name}</p>
         <div className={styles.footer}>
-          <div className={styles["add-list"]}>
+          <div onClick={clickHandler} className={styles["add-list"]}>
             <span>Add To Your</span>
             <FontAwesomeIcon className={styles["faIcon"]} icon={faListUl} />
           </div>
           <a
-            href={url}
+            href={recipe.url}
             rel="noreferrer"
             target="_blank"
             className={styles["see-instructions"]}

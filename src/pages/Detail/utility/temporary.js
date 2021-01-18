@@ -3,6 +3,7 @@ export const infos = {
   allergic: "sulfities",
   calory: 4450.137284518651,
   service: 14,
+  id: "123456",
   url:
     "http://www.seriouseats.com/recipes/2012/01/fried-eggplant-sandwich-with-eggplant-mayo.html",
   image:
