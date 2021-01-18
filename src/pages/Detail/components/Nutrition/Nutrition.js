@@ -26,17 +26,18 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
       <hr className={styles["top-hr"]} />
       <div className={styles["calory-container"]}>
         <div className={styles["calory-serving"]}>
-          <p>Servings</p>
+          <p>Recommended Servings</p>
           <form onSubmit={submitHandler}>
             <input
               name="service"
               onChange={changeHandler}
               value={serviceHolder}
             />
+            <button type="submit">Set</button>
           </form>
         </div>
         <div className={styles["calory-calory"]}>
-          <p>Calories / Serving</p>
+          <p>Calories/Serving</p>
           <p>{Math.ceil(Math.ceil(calory) / newService)}</p>
         </div>
       </div>

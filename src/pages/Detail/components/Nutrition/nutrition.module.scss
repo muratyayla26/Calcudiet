@@ -46,6 +46,9 @@
 }
 
 .calory-serving {
+  font-family: $font-stack;
+  font-weight: $primary-weight;
+  font-size: $secondary-font-size;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -59,7 +62,9 @@
   }
 
   input {
-    font-size: $secondary-font-size;
+    font-family: inherit;
+    font-size: inherit;
+    font-weight: inherit;
     border-radius: 10px;
     text-align: center;
     outline: none;
@@ -67,6 +72,21 @@
     height: 25px;
     padding: 0;
     margin: 0;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+  }
+
+  button {
+    font-family: $font-stack;
+    font-weight: $primary-weight;
+    font-size: $secondary-font-size;
+    border: 1px solid rgba(0, 0, 0, 0.35);
+    border-radius: 10px;
+    text-align: center;
+    outline: none;
+    width: 50px;
+    height: 25px;
+    cursor: pointer;
+    background-color: white;
   }
 }
 
