@@ -1,4 +1,3 @@
-import Popup from "reactjs-popup";
 import styles from "./_foodDataList.module.scss";
 import FoodCard from "./FoodCard";
 import like from "../../img/like.png";
