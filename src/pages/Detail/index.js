@@ -1,7 +1,7 @@
 //import db from "../../utility/firestore";
 import { search } from "../../utility/edamam";
 import { useState, useEffect } from "react";
-import styles from "./index.module.scss";
+import styles from "./styles/index.module.scss";
 import General from "./components/General/General";
 import { infos } from "./temporary";
 import Ingredients from "./components/Ingredients/Ingredients";

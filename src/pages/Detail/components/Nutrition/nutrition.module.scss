@@ -1,4 +1,4 @@
-@import "../../config.module.scss";
+@import "../../styles/config.module.scss";
 
 .container {
   border: 1px solid rgba(0, 0, 0, 0.35);
@@ -37,7 +37,8 @@
 }
 
 .bottom-hr {
-  margin: 10px auto 20px auto;}
+  margin: 10px auto 20px auto;
+}
 
 .calory-container {
   display: flex;
@@ -106,3 +107,5 @@
     margin: 0px;
   }
 }
+
+@import "mobile.module";

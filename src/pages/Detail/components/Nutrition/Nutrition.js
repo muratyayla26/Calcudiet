@@ -40,7 +40,7 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
           <p>{Math.ceil(Math.ceil(calory) / newService)}</p>
         </div>
       </div>
-      <hr className={styles["special-hr"]}/>
+      <hr className={styles["special-hr"]} />
       <div>
         {allergic && (
           <div>
@@ -51,7 +51,7 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
               />
               <p>Allergen: {allergic}</p>
             </div>
-            <hr className={styles["bottom-hr"]}/>
+            <hr className={styles["bottom-hr"]} />
           </div>
         )}
       </div>

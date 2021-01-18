@@ -1,8 +1,9 @@
 @import "config.module";
 
 .container {
-  width: 1300px;
-  margin: auto;
+  max-width: 1300px;
+  min-width: 750px;
+  margin: 50px auto 50px auto;
 }
 
 .sub-container {
@@ -16,3 +17,5 @@
   height: 40px;
   margin: 50px auto auto auto;
 }
+
+@import "mobile.module";
