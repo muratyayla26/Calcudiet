@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;1,400;1,700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Quattrocento+Sans:ital,wght@0,400;1,400;1,700&display=swap");
 
 .foodDataList {
   max-width: 100%;
@@ -23,7 +23,6 @@
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 }
-
 
 .cardImg {
   width: 100%;
@@ -59,80 +58,78 @@ li {
 }
 
 .cardContainer {
-	-webkit-animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
-	        animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.320, 1.275) 1s both;
+  -webkit-animation: swing-in-top-fwd 1.5s
+    cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s both;
+  animation: swing-in-top-fwd 1.5s cubic-bezier(0.175, 0.885, 0.32, 1.275) 1s
+    both;
 }
 
 @-webkit-keyframes swing-in-top-fwd {
   0% {
     -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
     -webkit-transform-origin: top;
-            transform-origin: top;
+    transform-origin: top;
     opacity: 0;
   }
   100% {
     -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+    transform: rotateX(0deg);
     -webkit-transform-origin: top;
-            transform-origin: top;
+    transform-origin: top;
     opacity: 1;
   }
 }
 @keyframes swing-in-top-fwd {
   0% {
     -webkit-transform: rotateX(-100deg);
-            transform: rotateX(-100deg);
+    transform: rotateX(-100deg);
     -webkit-transform-origin: top;
-            transform-origin: top;
+    transform-origin: top;
     opacity: 0;
   }
   100% {
     -webkit-transform: rotateX(0deg);
-            transform: rotateX(0deg);
+    transform: rotateX(0deg);
     -webkit-transform-origin: top;
-            transform-origin: top;
+    transform-origin: top;
     opacity: 1;
   }
 }
 
-
 ///////FeatchData.js
 
-.mainParagraphContainer{
-  max-width:600px;
+.mainParagraphContainer {
+  max-width: 600px;
 }
 
-.mainParagraph{
+.mainParagraph {
   font-family: Arial, Helvetica, sans-serif;
-  font-size:25px;
+  font-size: 25px;
   font-style: italic;
-  font-family: 'Quattrocento Sans', sans-serif;
+  font-family: "Quattrocento Sans", sans-serif;
   text-indent: 25px;
-  width: 95%;   
-  margin:auto;
+  width: 95%;
+  margin: auto;
   margin-top: 20px;
 }
 
-
 @media only screen and (max-width: 500px) {
-  .mainParagraphContainer{
+  .mainParagraphContainer {
     max-width: 90%;
-    margin:0 auto;
+    margin: 0 auto;
   }
-  .mainParagraph{
+  .mainParagraph {
     font-size: 20px;
   }
 
-  .foodCard{
-    margin-left:0px;
+  .foodCard {
+    margin-left: 0px;
   }
-
-
 }
 
 @media only screen and (min-width: 500px) and (max-width: 992px) {
-  .mainParagraphContainer{
+  .mainParagraphContainer {
     max-width: 100%;
   }
 }

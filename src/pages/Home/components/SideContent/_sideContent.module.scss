@@ -27,19 +27,18 @@
 }
 
 @media only screen and (max-width: 500px) {
-    .mainImg{
-        max-width: 50%;
-    }
-    .mainHeader{
-        font-size: 2rem;
-        margin-bottom: 15px;
-        margin-top: 0px;
-
-    }
+  .mainImg {
+    max-width: 50%;
+  }
+  .mainHeader {
+    font-size: 2rem;
+    margin-bottom: 15px;
+    margin-top: 0px;
+  }
 }
 
 @media only screen and (min-width: 500px) and (max-width: 992px) {
-    .mainImg{
-        max-width: 60%;
-    }
+  .mainImg {
+    max-width: 60%;
+  }
 }
