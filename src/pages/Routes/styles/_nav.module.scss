@@ -1,7 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Open+Sans:wght@300;400;700&display=swap");
 
 .navContainer {
-  border: 1px solid #000000;
+  border-bottom: 1px solid #000000;
   display: flex;
   width: 100%;
   min-height: 60px;
@@ -75,5 +75,30 @@
 
   .logoContainer {
     margin-left: 0;
+  }
+}
+
+
+//hamburger button menu
+
+
+.ham{
+  display:none
+}
+
+@media only screen and (max-width: 500px) {
+  .ham{
+    display:inline-block;
+  }
+
+ 
+}
+
+@media only screen and  (max-width: 992px) {
+  .ham{
+    display:block;
+  }
+  .navList{
+    display:none;
   }
 }
