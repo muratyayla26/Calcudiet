@@ -49,7 +49,7 @@ function FoodCard({ data }) {
 
           <Switch>
           <Link to={`/detail/${url}`}><button>See More</button></Link>
-          <Route path="/detail/:id" children={<Detail/>} />
+          <Route path="/detail/:id"/>
         </Switch>
 
           <Popup
