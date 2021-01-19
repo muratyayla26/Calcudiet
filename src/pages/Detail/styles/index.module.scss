@@ -1,0 +1,21 @@
+@import "config.module";
+
+.container {
+  max-width: 1300px;
+  min-width: 750px;
+  margin: 50px auto 50px auto;
+}
+
+.sub-container {
+  margin: 50px 0 50px 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+.loader {
+  width: 40px;
+  height: 40px;
+  margin: 50px auto auto auto;
+}
+
+@import "mobile.module";

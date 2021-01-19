@@ -1,9 +1,52 @@
+import { search } from "./utility/edamam";
+import { useState, useEffect } from "react";
+import { useRouteMatch } from "react-router-dom";
+import styles from "./styles/index.module.scss";
+import General from "./components/General/General";
+import { infos } from "./utility/temporary";
+import Ingredients from "./components/Ingredients/Ingredients";
+import Nutrition from "./components/Nutrition/Nutrition";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import Loader from "react-loader-spinner";
+
 const Detail = () => {
+  const { params } = useRouteMatch();
+  console.log(params.id);
+  const [recipe, setRecipe] = useState(infos);
+  const [loading, setLoading] = useState(false);
+  /*
+  useEffect(() => {
+    search(params.id).then((response) => {
+      setRecipe(response);
+      setLoading(false);
+    });
+  }, []);
+*/
   return (
-    <div className="container">
-      <h1>detailpage</h1>
+    <div>
+      {loading ? (
+        <div className={styles.loader}>
+          <Loader type="Oval" color="#000" height={40} width={40} />
+        </div>
+      ) : (
+        <div className={styles.container}>
+          <General recipe={recipe} />
+          <div className={styles["sub-container"]}>
+            <Ingredients ingredients={recipe.ingredients} url={recipe.url} />
+            <Nutrition
+              calory={recipe.calory}
+              allergic={recipe.allergic}
+              service={recipe.service}
+              nutrition={recipe.nutrition}
+            />
+          </div>
+        </div>
+      )}
     </div>
   );
 };
 
 export default Detail;
+/*
+path="/detail/:id" bu yol app.jste route eklenecek
+<Link to={`/detail/${itemin_apiden gelen_Idsi}`}> tıklanılacak yere link verilecek*/

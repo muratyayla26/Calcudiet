@@ -1,0 +1,48 @@
+@media (max-width: 480px) {
+  .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    max-height: fit-content;
+    margin: auto;
+    max-width: 100%;
+    overflow: hidden;
+  }
+
+  .img-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .text-container {
+    max-height: fit-content;
+    max-width: 100%;
+    display: block;
+  }
+
+  .name {
+    margin: 10px auto 10px auto;
+    max-height: 115px;
+    text-align: center;
+  }
+
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .add-list {
+    margin: 10px auto 10px auto;
+  }
+
+  .see-instructions {
+    margin: 10px auto 10px auto;
+  }
+
+  .share-container {
+    margin: 10px auto 10px auto;
+  }
+}
