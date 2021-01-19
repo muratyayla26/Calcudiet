@@ -1,10 +1,24 @@
+import {useEffect, useState} from 'react';
 import Popup from 'reactjs-popup';
 import styles from "./_foodDataList.module.scss";
 import '../Popups/homefoodpopup.css'
-import like from "../../img/like.png";
-import plate from "../../img/plate.png";
+import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import Detail from '../../../Detail/index'
+
 
 function FoodCard({ data }) {
+
+
+  const [url, setUrl] = useState(null)
+
+  //get every string after underline _ 
+  useEffect(()=>{
+      const longUrl = data.recipe.uri
+      const url = longUrl.split('_')[1];
+      setUrl(url)
+  })
+
+
   return (
     <li className={styles.foodCard}>
       <div className={styles.cardHeader}>
@@ -33,20 +47,13 @@ function FoodCard({ data }) {
         </div>
         <div className="actions">
 
+          <Switch>
+          <Link to={`/detail/${url}`}><button>See More</button></Link>
+          <Route path="/detail/:id" children={<Detail/>} />
+        </Switch>
 
           <Popup
-            trigger={<button className="button"> See More </button>}
-            position="top center"
-            nested
-          >
-            {/* Show more function will be added here */}
-            <span>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            </span>
-          </Popup>
-           
-          <Popup
-            trigger={<button className="button"> Add to Favorites </button>}
+            trigger={<button  className="button"> Add to Favorites </button>}
             position="top center"
             nested
           >
