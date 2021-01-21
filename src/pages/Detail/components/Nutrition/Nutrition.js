@@ -3,7 +3,7 @@ import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
 
-const Nutrition = ({ calory, service, allergic, nutrition }) => {
+const Nutrition = ({ calories, service, cautions, digest }) => {
   const [serviceHolder, setServiceHolder] = useState(service);
   const [newService, setNewService] = useState(service);
 
@@ -38,25 +38,25 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
         </div>
         <div className={styles["calory-calory"]}>
           <p>Calories/Serving</p>
-          <p>{Math.ceil(Math.ceil(calory) / newService)}</p>
+          <p>{Math.ceil(Math.ceil(calories) / newService)}</p>
         </div>
       </div>
       <hr className={styles["special-hr"]} />
       <div>
-        {allergic && (
+        {cautions.length !== 0 && cautions[0] !== "FODMAP" && cautions[0] && (
           <div>
             <div className={styles["allergic-container"]}>
               <FontAwesomeIcon
                 className={styles["faIcon"]}
                 icon={faExclamationCircle}
               />
-              <p>Allergen: {allergic}</p>
+              <p>Allergen: {cautions}</p>
             </div>
             <hr className={styles["bottom-hr"]} />
           </div>
         )}
       </div>
-      {nutrition.map((item, index) => {
+      {digest.map((item, index) => {
         return (
           <div key={index} className={styles["line-container"]}>
             <p>{item.label}</p>

@@ -12,16 +12,17 @@ import Loader from "react-loader-spinner";
 const Detail = () => {
   const { params } = useRouteMatch();
   console.log(params.id);
-  const [recipe, setRecipe] = useState(infos);
-  const [loading, setLoading] = useState(false);
-  /*
+  const [recipe, setRecipe] = useState(null);
+  const [loading, setLoading] = useState(true);
+
   useEffect(() => {
     search(params.id).then((response) => {
+      console.log(response);
       setRecipe(response);
       setLoading(false);
     });
   }, []);
-*/
+
   return (
     <div>
       {loading ? (
@@ -32,12 +33,15 @@ const Detail = () => {
         <div className={styles.container}>
           <General recipe={recipe} />
           <div className={styles["sub-container"]}>
-            <Ingredients ingredients={recipe.ingredients} url={recipe.url} />
+            <Ingredients
+              ingredientLines={recipe.ingredientLines}
+              url={recipe.url}
+            />
             <Nutrition
-              calory={recipe.calory}
-              allergic={recipe.allergic}
-              service={recipe.service}
-              nutrition={recipe.nutrition}
+              calories={recipe.calories}
+              cautions={recipe.cautions}
+              service={recipe.yield}
+              digest={recipe.digest}
             />
           </div>
         </div>

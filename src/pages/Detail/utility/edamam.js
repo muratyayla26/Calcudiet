@@ -12,18 +12,15 @@ export const search = async (inputId) => {
     const { data } = await axios.get(urlToFetch);
     console.log(data);
     const recipe = {
-      name: data[0].label,
+      label: data[0].label,
       image: data[0].image,
       url: data[0].url,
-      allergic:
-        data[0].cautions.length === 0 || data[0].cautions[0] === "FODMAP"
-          ? ""
-          : data[0].cautions[0],
-      ingredients: data[0].ingredientLines,
-      service: data[0].yield || 1, //number
-      calory: data[0].calories, //number
-      nutrition: data[0].digest, //total: number geliyor
-      id: data[0].uri.split("_")[1],
+      cautions: data[0].cautions,
+      ingredientLines: data[0].ingredientLines,
+      yield: data[0].yield || 1, //number
+      calories: data[0].calories, //number
+      digest: data[0].digest, //total: number geliyor
+      uri: data[0].uri,
     };
 
     return recipe;

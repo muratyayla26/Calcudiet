@@ -20,7 +20,7 @@ const General = ({ recipe }) => {
         <img src={recipe.image} alt="meal" />
       </div>
       <div className={styles["text-container"]}>
-        <p className={styles.name}>{recipe.name}</p>
+        <p className={styles.name}>{recipe.label}</p>
         <div className={styles.footer}>
           <div onClick={clickHandler} className={styles["add-list"]}>
             <span>Add To Your</span>
