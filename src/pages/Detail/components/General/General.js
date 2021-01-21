@@ -8,6 +8,7 @@ import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
 import { faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
+import { alreadyAddedChecker } from "../../../../utility/alreadyAddedChecker";
 
 const General = ({ recipe }) => {
   const clickHandler = () => {
