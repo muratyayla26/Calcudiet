@@ -66,6 +66,7 @@ const Nutrition = ({ calory, service, allergic, nutrition }) => {
           </div>
         );
       })}
+      <hr />
     </div>
   );
 };
