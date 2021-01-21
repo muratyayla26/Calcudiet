@@ -47,10 +47,11 @@ function FoodCard({ data }) {
         </div>
         <div className="actions">
 
-          <Switch>
+
+          
           <Link to={`/detail/${url}`}><button>See More</button></Link>
-          <Route path="/detail/:id"/>
-        </Switch>
+  
+
 
           <Popup
             trigger={<button  className="button"> Add to Favorites </button>}

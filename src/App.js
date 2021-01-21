@@ -20,7 +20,7 @@ function App() {
           <Route path="/search">
             <Search />
           </Route>
-          <Route path="/detail">
+          <Route path="/detail/:id">
             <Detail />
           </Route>
           <Route path="/user">

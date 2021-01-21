@@ -3,6 +3,7 @@ import "./styles/animate.css";
 import FetchData from "./components/FoodDataList/FetchData";
 import SideContent from "./components/SideContent/SideContent";
 import About from "./components/About/About";
+import DishContainer from "./components/Dish.js/DishContainer";
 
 const Home = () => {
   return (
@@ -12,6 +13,7 @@ const Home = () => {
         <SideContent />
       </div>
       <About />
+      <DishContainer/>
     </div>
   );
 };
