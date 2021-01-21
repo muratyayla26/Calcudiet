@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import foods from "../../img/foods.png";
 import styles from "./_about.module.scss";
-import Popup from "reactjs-popup";
 
 function About() {
   useEffect(() => {
