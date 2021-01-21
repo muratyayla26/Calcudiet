@@ -1,13 +1,13 @@
 import { useEffect } from "react";
 import foods from "../../img/foods.png";
 import styles from "./_about.module.scss";
-import Popup from "reactjs-popup";
 
 function About() {
   useEffect(() => {
     function animations() {
       document.addEventListener("scroll", function (e) {
-        var top = window.pageYOffset + window.innerHeight,
+        if(document.querySelector(".home-about-head")){
+        let top = window.pageYOffset + window.innerHeight,
           isVisible =
             top > document.querySelector(".home-about-head").offsetTop;
 
@@ -19,9 +19,9 @@ function About() {
             .querySelector(".home-about-paragraph")
             .classList.add("animate-about");
         }
+      }
       });
     }
-
     animations();
   }, []);
 
