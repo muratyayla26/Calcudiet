@@ -46,7 +46,7 @@ function DishList() {
     return (
         <div className={`${styles.dishList} dishList`}>
         {dishes.map((i)=>(
-            <DishCard img={i.img} title={i.title} desc={i.desc} />
+            <DishCard key={i.title} img={i.img} title={i.title} desc={i.desc} />
         ))}
         </div>
     )
