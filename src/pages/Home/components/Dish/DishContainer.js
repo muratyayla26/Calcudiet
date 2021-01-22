@@ -7,10 +7,9 @@ function DishContainer() {
     return (
         <div className={styles.dishContainer}>
         <h2>
-        Most Liked Dishes
+        Popular Dish
         </h2>
-        <div className={styles.cardListContainer}>
-            
+        <div className={styles.cardListContainer}> 
             <DishList/>
             </div>
         </div>
