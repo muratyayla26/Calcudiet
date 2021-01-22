@@ -1,5 +1,7 @@
 import db from "./firestore";
-
+//firestore veri ekleyeceğimiz fonksiyon
+// fonksiyon true dönüyorsa veri firestore eklenmiş anlamına geliyor
+// false dönerse ya daha önce eklenmiş veri, yada başka bir hata
 export const addToStore = async (recipe) => {
   let checker = true;
   try {
@@ -9,7 +11,7 @@ export const addToStore = async (recipe) => {
       .where("id", "==", `${id}`)
       .get()
       .then((response) => {
-        return response.docs[0].data();
+        console.log(response.docs[0].data());
       });
     checker = false;
   } catch (error) {
@@ -35,4 +37,6 @@ export const addToStore = async (recipe) => {
   } else {
     console.log("veri daha once stora eklendigi icin tekrar eklenmedi");
   }
+
+  return checker;
 };

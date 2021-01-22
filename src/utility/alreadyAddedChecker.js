@@ -1,5 +1,7 @@
 import db from "./firestore";
-
+// verinin daha önce eklenip eklenmediğini kontrol edeceğimiz fonksiyon
+//eğer true dönerse daha önce veri eklenmiş demek
+//false dönerse veri store daha önce eklenmemiş
 export const alreadyAddedChecker = async (recipe) => {
   let checker = false;
   try {
