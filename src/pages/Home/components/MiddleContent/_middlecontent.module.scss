@@ -1,4 +1,4 @@
-.middleContainer{
+.middleContainer,.secMiddleContainer{
     max-width: 1300px;
     height: auto;
     display: flex;
@@ -45,7 +45,9 @@
     display:none;
 }
 
-
+.secTextContainer{
+    flex-direction: column-reverse;
+}
 .textContainer, .secTextContainer{
     display:flex;
     flex-direction: column;
@@ -81,15 +83,25 @@
         margin-bottom: 45px;
     }
 
+    .midImg{
+        display: inline-block;
+        width: 70%;
+        height: auto;
+        margin:0 auto;
+    }
+    .secMidImg{
+        display: inline-block;
+        width: 70%;
+        height: auto;
+        margin:0 auto;
+    }
+
+  
+
     .middleContainer{
         flex-direction: column-reverse;
         margin-top: 50px;
-        img{
-            display: inline-block;
-            width: 70%;
-            height: auto;
-            margin:0 auto;
-        }
+     
         p{
             font-size: 1.5rem;
             width: 95%;
@@ -99,7 +111,18 @@
         }
 
     }
-
+    .secMiddleContainer{
+        flex-direction: column;
+        margin-top: 50px;
+     
+        p{
+            font-size: 1.5rem;
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 35px;
+            
+        }
+    }
     .middleheader{
         display:none;
     }

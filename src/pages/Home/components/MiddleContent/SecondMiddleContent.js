@@ -4,7 +4,8 @@ import Fade from 'react-reveal/Fade';
 
 function SecondMiddleContent() {
     return (
-        <div className={styles.middleContainer}>
+        <div className={styles.secMiddleContainer}>
+            <h4 className={styles.middleheaderMobile}>You are what you eat</h4>
         <img className={styles.secMidImg} src={dietplate} alt="apple"/>
         <div className={`${styles.secTextContainer} textContainer`}>
           <Fade duration={3000}>
@@ -13,7 +14,6 @@ function SecondMiddleContent() {
         <p className={styles.secMidParagraph}>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.. </p>
           </Fade>
         </div>
-        <h4 className={styles.middleheaderMobile}>Stay healthy stay fit</h4>
 
     </div>
     )
