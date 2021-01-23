@@ -1,0 +1,131 @@
+.middleContainer,.secMiddleContainer{
+    max-width: 1300px;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+    margin-top: 120px;
+    flex-wrap: nowrap;
+
+  
+
+    p{
+        font-family: "Quattrocento Sans", sans-serif;
+        color: rgb(206, 92, 111);
+        font-size:1.7rem;
+        font-style:italic;
+        text-indent: 20px;
+        max-width: 500px;
+    }
+
+}
+
+.secTextContainer{
+    font-family: "Quattrocento Sans", sans-serif;
+    color: rgb(206, 92, 111);
+    font-size:1.7rem;
+    font-style:italic;
+    text-indent: 20px;
+    max-width: 500px;
+    margin-left: auto;
+}
+
+.midImg{
+        width: 600px;
+        height: 430px;
+        margin-left: auto;
+}
+
+.secMidImg{
+    width: 600px;
+    height: 430px;
+    margin-left: right;
+}
+
+.middleheaderMobile{
+    display:none;
+}
+
+.secTextContainer{
+    flex-direction: column-reverse;
+}
+.textContainer, .secTextContainer{
+    display:flex;
+    flex-direction: column;
+
+
+    h4{
+        text-align: center;
+        font-family: "Quattrocento Sans", sans-serif;
+        color: rgb(206, 92, 111);
+        font-size:2rem;
+        font-style:italic;
+        max-width: 500px;
+        line-height: 3rem;
+        margin-top: 125px;
+    }
+}
+
+@media only screen and (max-width: 500px) {
+    .middleContainer img{
+        animation: none;
+    }
+  }
+  
+  @media only screen and (max-width: 992px) {
+ 
+    .middleheaderMobile{
+        display:inline;
+        text-align: center;
+        font-family: "Quattrocento Sans", sans-serif;
+        color: rgb(206, 92, 111);
+        font-size:2rem;
+        font-style:italic;
+        margin-bottom: 45px;
+    }
+
+    .midImg{
+        display: inline-block;
+        width: 70%;
+        height: auto;
+        margin:0 auto;
+    }
+    .secMidImg{
+        display: inline-block;
+        width: 70%;
+        height: auto;
+        margin:0 auto;
+    }
+
+  
+
+    .middleContainer{
+        flex-direction: column-reverse;
+        margin-top: 50px;
+     
+        p{
+            font-size: 1.5rem;
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 35px;
+            
+        }
+
+    }
+    .secMiddleContainer{
+        flex-direction: column;
+        margin-top: 50px;
+     
+        p{
+            font-size: 1.5rem;
+            width: 95%;
+            margin: 0 auto;
+            margin-top: 35px;
+            
+        }
+    }
+    .middleheader{
+        display:none;
+    }
+
+  }
+  

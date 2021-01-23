@@ -3,13 +3,13 @@ import Popup from 'reactjs-popup';
 import styles from "./_foodDataList.module.scss";
 import '../Popups/homefoodpopup.css'
 import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
-import Detail from '../../../Detail/index'
-
+import {addToStore} from '../../../../utility/addToStore'
+import {alreadyAddedChecker} from '../../../../utility/alreadyAddedChecker'
 
 function FoodCard({ data }) {
 
-
   const [url, setUrl] = useState(null)
+  const [listStatus, setListStatus] = useState(null)
 
   //get every string after underline _ 
   useEffect(()=>{
@@ -18,6 +18,12 @@ function FoodCard({ data }) {
       setUrl(url)
   })
 
+  const addToList = () => addToStore(data.recipe).then(response => console.log(response));
+  const checkList = ()=> {
+    alreadyAddedChecker(data.recipe).then(response=>setListStatus(response));
+    listStatus != false && addToList()
+    
+  }
 
   return (
     <li className={styles.foodCard}>
@@ -25,8 +31,9 @@ function FoodCard({ data }) {
         <img className={styles.cardImg} src={data.recipe.image}></img>
         <p className={styles.cardLabel}>{data.recipe.label}</p>
         <div className={styles.cardOptions}>
+
         <Popup
-    trigger={<button className="button home-trigger-btn"> Details </button>}
+    trigger={<button  className="button home-trigger-btn"> Details</button>}
     modal
     nested
   >
@@ -46,12 +53,9 @@ function FoodCard({ data }) {
          <p><span>Protein:</span> {parseInt(data.recipe.totalNutrients.PROCNT.quantity)}g</p>
         </div>
         <div className="actions">
+          {listStatus === true && <p className={styles.alreadyAddedList}> Already added to list</p> }
 
-
-          
           <Link to={`/detail/${url}`}><button>See More</button></Link>
-  
-
 
           <Popup
             trigger={<button  className="button"> Add to Favorites </button>}
@@ -63,29 +67,7 @@ function FoodCard({ data }) {
               Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
             </span>
           </Popup>
-
-          <Popup
-            trigger={<button className="button"> Add to List </button>}
-            position="top center"
-            nested
-          >
-            {/* Add list function will be added here */}
-            <span>
-              Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
-            </span>
-          </Popup>
-
-
-
-          {/* <button
-            className="button"
-            onClick={() => {
-              console.log('modal closed ');
-              close();
-            }}
-          >
-            close modal
-          </button> */}
+          <button onClick={checkList}>Add to list</button>
         </div>
       </div>
     )}
@@ -93,10 +75,6 @@ function FoodCard({ data }) {
   </Popup>
         </div>
       </div>
-
-     
-
-    
     </li>
   );
 }
