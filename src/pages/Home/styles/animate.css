@@ -1,4 +1,4 @@
-.animate-about {
+/* .animate-about {
 	-webkit-animation: text-focus-in 0.75s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.75s both;
 	        animation: text-focus-in 0.75s cubic-bezier(0.550, 0.085, 0.680, 0.530) 0.75s both;
 }
@@ -26,11 +26,11 @@
               filter: blur(0px);
       opacity: 1;
     }
-  }
+  } */
   
 /* DISH LIST ANIMATIONS */
 
-
+/* 
 .animate-dish  {
 	-webkit-animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
 	        animation: flip-in-hor-bottom 1s cubic-bezier(0.250, 0.460, 0.450, 0.940) 1s both;
@@ -60,11 +60,11 @@
             transform: rotateX(0);
     opacity: 1;
   }
-}
+} */
 
 
 /* MIDDLE CONTENT ANIMATE */
-
+/* 
 .animate-middle {
   -webkit-animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
   animation: scale-up-center 0.4s cubic-bezier(0.390, 0.575, 0.565, 1.000) 1s both;
@@ -113,4 +113,4 @@
     -webkit-transform: scale(1);
             transform: scale(1);
   }
-}
+} */

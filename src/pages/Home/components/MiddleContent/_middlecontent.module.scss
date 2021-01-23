@@ -3,14 +3,10 @@
     height: auto;
     display: flex;
     margin: 0 auto;
-    margin-top: 150px;
+    margin-top: 120px;
     flex-wrap: nowrap;
 
-    img{
-        width: 600px;
-        height: 430px;
-        margin-left: auto;
-    }
+  
 
     p{
         font-family: "Quattrocento Sans", sans-serif;
@@ -23,12 +19,34 @@
 
 }
 
+.secTextContainer{
+    font-family: "Quattrocento Sans", sans-serif;
+    color: rgb(206, 92, 111);
+    font-size:1.7rem;
+    font-style:italic;
+    text-indent: 20px;
+    max-width: 500px;
+    margin-left: auto;
+}
+
+.midImg{
+        width: 600px;
+        height: 430px;
+        margin-left: auto;
+}
+
+.secMidImg{
+    width: 600px;
+    height: 430px;
+    margin-left: right;
+}
+
 .middleheaderMobile{
     display:none;
 }
 
 
-.textContainer{
+.textContainer, .secTextContainer{
     display:flex;
     flex-direction: column;
 
@@ -41,6 +59,7 @@
         font-style:italic;
         max-width: 500px;
         line-height: 3rem;
+        margin-top: 125px;
     }
 }
 

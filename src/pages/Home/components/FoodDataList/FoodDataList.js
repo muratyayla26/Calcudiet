@@ -1,7 +1,5 @@
 import styles from "./_foodDataList.module.scss";
 import FoodCard from "./FoodCard";
-import like from "../../img/like.png";
-import plate from "../../img/plate.png";
 
 function FoodDataList({ data }) {
   console.log(data);

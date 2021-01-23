@@ -5,6 +5,7 @@ import SideContent from "./components/SideContent/SideContent";
 import About from "./components/About/About";
 import DishContainer from "./components/Dish/DishContainer";
 import MiddleContent from "./components/MiddleContent/MiddleContent"
+import SecondMiddleContent from "./components/MiddleContent/SecondMiddleContent";
 
 const Home = () => {
   return (
@@ -16,6 +17,7 @@ const Home = () => {
       <About />
       <DishContainer/>
       <MiddleContent/>
+      <SecondMiddleContent/>
     </div>
   );
 };
