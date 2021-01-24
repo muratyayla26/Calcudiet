@@ -2,7 +2,6 @@ import styles from "./_foodDataList.module.scss";
 import FoodCard from "./FoodCard";
 
 function FoodDataList({ data }) {
-  console.log(data);
   return (
     <div className={styles.foodDataList}>
       <ul className={styles.cardContainer}>

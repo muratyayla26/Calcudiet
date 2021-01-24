@@ -2,7 +2,7 @@ import {useEffect, useState} from 'react';
 import Popup from 'reactjs-popup';
 import styles from "./_foodDataList.module.scss";
 import '../Popups/homefoodpopup.css'
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import {addToStore} from '../../../../utility/addToStore'
 import {alreadyAddedChecker} from '../../../../utility/alreadyAddedChecker'
 
