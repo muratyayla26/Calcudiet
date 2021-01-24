@@ -2,6 +2,7 @@ import styles from "./nutrition.module.scss";
 import { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faExclamationCircle } from "@fortawesome/free-solid-svg-icons";
+import NutritionLine from "../NutritionLine/NutritionLine";
 
 const Nutrition = ({ calories, service, cautions, digest }) => {
   const [serviceHolder, setServiceHolder] = useState(service);
@@ -58,12 +59,7 @@ const Nutrition = ({ calories, service, cautions, digest }) => {
       </div>
       {digest.map((item, index) => {
         return (
-          <div key={index} className={styles["line-container"]}>
-            <p>{item.label}</p>
-            <p>{`${Math.ceil((Math.ceil(item.total) || 0) / newService)} ${
-              item.unit
-            }`}</p>
-          </div>
+          <NutritionLine key={index} item={item} newService={newService} />
         );
       })}
       <hr />

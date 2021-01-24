@@ -1,6 +1,7 @@
 import styles from "./ingredients.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
+import IngredientsLine from "../IngredientsLine/IngredientsLine";
 
 const Ingredients = ({ ingredientLines, url }) => {
   return (
@@ -10,11 +11,7 @@ const Ingredients = ({ ingredientLines, url }) => {
       </div>
       <hr />
       {ingredientLines.map((item, index) => {
-        return (
-          <div className={styles["line-container"]} key={index}>
-            <p>{item}</p>
-          </div>
-        );
+        return <IngredientsLine item={item} key={index} />;
       })}
       <hr className={styles["bottom-hr"]} />
       <div className={styles["footer-container"]}>
