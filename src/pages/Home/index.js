@@ -6,6 +6,7 @@ import About from "./components/About/About";
 import DishContainer from "./components/Dish/DishContainer";
 import MiddleContent from "./components/MiddleContent/MiddleContent"
 import SecondMiddleContent from "./components/MiddleContent/SecondMiddleContent";
+import FetchOffers from "./components/Offer/FetchOffers";
 
 const Home = () => {
   return (
@@ -18,6 +19,7 @@ const Home = () => {
       <DishContainer/>
       <MiddleContent/>
       <SecondMiddleContent/>
+      <FetchOffers/>
     </div>
   );
 };

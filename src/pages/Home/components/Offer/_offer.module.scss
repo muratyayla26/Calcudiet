@@ -1,0 +1,67 @@
+.offerContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  font-family: "Open Sans", sans-serif;
+
+  h2 {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 4px;
+    color: green;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    font-size: 2rem;
+    text-align: center;
+  }
+}
+
+.offerTableContainer {
+  width: 100%;
+  margin: 0 auto;
+}
+
+.offerOptions {
+  width: 50%;
+  display: flex;
+  margin: 0 auto;
+  justify-content: space-evenly;
+  cursor: pointer;
+  margin-bottom: 70px;
+  color: rgb(236, 53, 83);
+  font-weight: 600;
+  text-decoration: underline;
+
+  p:hover {
+    color: green;
+  }
+}
+
+table {
+  width: 100%;
+  a {
+    text-decoration: none;
+    color: rgb(226, 37, 69);
+  }
+}
+
+th,
+td {
+  padding: 15px;
+}
+
+th span {
+  font-size: 12px;
+  font-weight: 400;
+}
+
+td {
+  color: rgb(226, 37, 69);
+}
+
+tr:hover {
+  background-color: rgb(253, 244, 244);
+}
+
+th {
+  text-align: left;
+  color: rgb(51, 180, 0);
+}
