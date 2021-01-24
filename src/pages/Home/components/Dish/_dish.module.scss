@@ -49,3 +49,23 @@
     }
 
 }
+
+
+
+@media only screen and (max-width: 500px) {
+  .dishCard p{
+    margin-bottom: 30px;
+  }
+  .dishContainer {
+      margin-top: 50px;
+  }
+  .dishContainer h2{
+      margin-bottom: 30px;
+  }
+
+  }
+
+
+ @media only screen and (min-width: 500px) and (max-width: 992px) {
+
+ }
