@@ -1,5 +1,5 @@
 
-import {BrowserRouter as Router,Switch,Route,Link} from "react-router-dom";
+import {Link} from "react-router-dom";
 import styles from "./styles/_nav.module.scss";
 import './styles/nav-ham-menu.css'
 import logo from "./img/logo.png";

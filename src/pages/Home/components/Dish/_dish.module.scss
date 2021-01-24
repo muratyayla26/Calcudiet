@@ -1,71 +1,62 @@
-.dishContainer{
-    max-width: 1300px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 120px;
+.dishContainer {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+  margin-top: 120px;
 
-    h2{
-        font-family: "Open Sans", sans-serif;
-        letter-spacing: 4px;
-        color: green;
-        margin-bottom: 80px;
-        font-size:2rem;
-    }
+  h2 {
+    font-family: "Open Sans", sans-serif;
+    letter-spacing: 4px;
+    color: green;
+    margin-bottom: 80px;
+    font-size: 2rem;
+  }
 }
 
+.dishList {
+  display: flex;
+  width: 100%;
+  height: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
 
-
-.dishList{
-    display:flex;
+.dishCard {
+  max-width: 400px;
+  margin: 0 auto;
+  img {
     width: 100%;
-    height: auto;
-    justify-content: space-between;
-    flex-wrap: wrap;
+    height: 300px;
+  }
+
+  h4 {
+    text-align: center;
+    font-family: "Open Sans", sans-serif;
+    padding-bottom: 10px;
+    padding-top: 10px;
+    color: rgb(75, 43, 2);
+    font-size: 1.2rem;
+  }
+
+  p {
+    text-align: left;
+    text-indent: 10px;
+    font-family: "Open Sans", sans-serif;
+    color: rgb(131, 75, 2);
+  }
 }
-
-.dishCard{
-    max-width: 400px;
-    margin:0 auto;
-    img{
-        
-        width: 100%;
-        height: 300px;
-    }
-    
-    h4{
-        text-align: center;
-        font-family: "Open Sans", sans-serif;
-        padding-bottom:10px;
-        padding-top:10px;
-        color:rgb(75, 43, 2);
-        font-size:1.2rem;
-    }
-
-    p{
-        text-align: left;
-        text-indent: 10px;
-        font-family: "Open Sans", sans-serif;
-        color:rgb(131, 75, 2);
-    }
-
-}
-
-
 
 @media only screen and (max-width: 500px) {
-  .dishCard p{
+  .dishCard p {
     margin-bottom: 30px;
   }
   .dishContainer {
-      margin-top: 50px;
+    margin-top: 50px;
   }
-  .dishContainer h2{
-      margin-bottom: 30px;
+  .dishContainer h2 {
+    margin-bottom: 30px;
   }
+}
 
-  }
-
-
- @media only screen and (min-width: 500px) and (max-width: 992px) {
-
- }
+@media only screen and (min-width: 500px) and (max-width: 992px) {
+}

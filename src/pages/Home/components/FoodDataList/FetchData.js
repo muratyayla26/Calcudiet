@@ -11,7 +11,7 @@ function FetchData() {
     const key = process.env.REACT_APP_KEY;
     const appid = process.env.REACT_APP_APPID;
     e.preventDefault();
-    if (food != "")
+    if (food !== "")
       axios
         .get(
           `https://api.edamam.com/search?q=${food}&app_id=${appid}&app_key=${key}&from=0&to=4&calories=591-722&health=alcohol-free`

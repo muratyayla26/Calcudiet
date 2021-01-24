@@ -1,6 +1,5 @@
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
-import styles from "./_offer.module.scss";
 import Slide from "react-reveal/Fade";
 function OfferTable({ offer }) {
   const [url, setUrl] = useState(null);
@@ -10,7 +9,7 @@ function OfferTable({ offer }) {
     const longUrl = offer.recipe.uri;
     const url = longUrl.split("_")[1];
     setUrl(url);
-  });
+  },[offer.recipe.uri]);
 
   return (
     <>

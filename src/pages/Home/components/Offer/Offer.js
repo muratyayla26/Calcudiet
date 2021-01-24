@@ -1,6 +1,5 @@
 import React from "react";
 import styles from "./_offer.module.scss";
-import FetchOffers from "./FetchOffers";
 import OfferTable from "./OfferTable";
 
 function Offer({ offers, setSelect }) {
