@@ -1,21 +1,22 @@
 export const infos = {
-  name: "Fried Eggplant Sandwich With Eggplant Mayo Recipe",
-  allergic: "sulfities",
-  calory: 4450.137284518651,
-  service: 14,
+  label: "Fried Eggplant Sandwich With Eggplant Mayo Recipe",
+  cautions: "sulfities",
+  calories: 4450.137284518651,
+  yield: 14,
   id: "123456",
   url:
     "http://www.seriouseats.com/recipes/2012/01/fried-eggplant-sandwich-with-eggplant-mayo.html",
   image:
     "https://www.edamam.com/web-img/b63/b63ad560db5acbc5ac4ed970bf1d1212.jpg",
-  ingredients: [
+  ingredientLines: [
     "For the Eggplant Mayo:",
     "2 medium eggplants, about 1 1/2 pounds total",
     "1 cup canola oil",
     "1 clove garlic, grated on a microplane grater",
     "2 teaspoons juice from 1 lemon",
   ],
-  nutrition: [
+  uri: "",
+  digest: [
     {
       label: "Fat",
       unit: "g",
