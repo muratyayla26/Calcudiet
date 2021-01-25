@@ -14,13 +14,12 @@ function FetchOffers() {
         `https://api.edamam.com/search?q=${select}&app_id=${appid}&app_key=${key}`
       )
       .then((res) => setOffers(res.data.hits));
-    console.log("ASD");
   }, [select, setSelect]);
 
   return (
-    <div>
+    <>
       <Offer setSelect={setSelect} offers={offers} />
-    </div>
+    </>
   );
 }
 

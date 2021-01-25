@@ -3,7 +3,6 @@ import styles from "./_offer.module.scss";
 import OfferTable from "./OfferTable";
 
 function Offer({ offers, setSelect }) {
-  console.log(offers);
   return (
     <div className={styles.offerContainer}>
       <h2>Our Offers</h2>
@@ -15,7 +14,7 @@ function Offer({ offers, setSelect }) {
       </div>
 
       <div className={styles.offerTableContainer}>
-        <table>
+        <table className={styles.offerTable}>
           <thead>
             <tr>
               <th>Food</th>

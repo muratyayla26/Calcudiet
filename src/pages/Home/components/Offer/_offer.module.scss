@@ -65,3 +65,18 @@ th {
   text-align: left;
   color: rgb(51, 180, 0);
 }
+
+
+@media only screen and (max-width: 500px) {
+   th,td{
+      font-size: 14px;
+      padding: 7px;
+   }
+    
+}
+
+@media only screen and  (max-width: 992px) {
+  .offerOptions{
+    width: 90%;
+  }
+}
