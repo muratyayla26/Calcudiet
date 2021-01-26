@@ -10,13 +10,7 @@ const Search = () => {
     <div>
       <h1 className={styles.header}>searchpage</h1>
       <SearchBar setRecipe={setRecipe} />
-      <div>
-        {
-            recipe ? <SearchDetails recipe={recipe} /> : ""
-        }
-      </div>
-
- 
+      <div>{recipe ? <SearchDetails recipe={recipe} /> : ""}</div>
     </div>
   );
 };
