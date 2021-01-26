@@ -1,16 +1,10 @@
-import React from 'react';
+import React from "react";
 import styles from "./FoodCard.module.scss";
 
-
-function FoodCard({recipe}) {
-
-    console.log(recipe);
-    console.log(recipe.label);
-    return (
-        <div className={styles.FoodCard}>
-           
-        </div>
-    )
+function FoodCard({ recipe }) {
+  console.log(recipe);
+  console.log(recipe.label);
+  return <div className={styles.FoodCard}></div>;
 }
 
 export default FoodCard;
