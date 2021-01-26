@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import axios from "axios";
-import styles from "./_offer.module.scss";
 import Offer from "./Offer";
 
 function FetchOffers() {
@@ -15,13 +14,12 @@ function FetchOffers() {
         `https://api.edamam.com/search?q=${select}&app_id=${appid}&app_key=${key}`
       )
       .then((res) => setOffers(res.data.hits));
-    console.log("ASD");
   }, [select, setSelect]);
 
   return (
-    <div>
+    <>
       <Offer setSelect={setSelect} offers={offers} />
-    </div>
+    </>
   );
 }
 
