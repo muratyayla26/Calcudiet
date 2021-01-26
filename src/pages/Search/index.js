@@ -8,7 +8,7 @@ const Search = () => {
   console.log(recipe);
   return (
     <div>
-      <h1 className={styles.header}>searchpage</h1>
+      <h1 className={styles.header}>SearcPage</h1>
       <SearchBar setRecipe={setRecipe} />
       <div>{recipe ? <SearchDetails recipe={recipe} /> : ""}</div>
     </div>

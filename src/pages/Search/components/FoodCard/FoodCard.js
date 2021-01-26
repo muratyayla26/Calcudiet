@@ -4,11 +4,15 @@ import styles from "./FoodCard.module.scss";
 function FoodCard({ recipe }) {
   console.log(recipe);
   console.log(recipe.label);
-  return <div className={styles.FoodCard}></div>;
+  return (
+    <li className={styles.container}>
+      <div className={styles.FoodCard}>
+        <img className={styles.img} alt="" src={recipe.image} />
+        <p className={styles.p1}>{recipe.label}</p>
+        <p className={styles.p2}>servis sayısı: {recipe.yield}</p>
+      </div>
+    </li>
+  );
 }
 
 export default FoodCard;
-
-/*  <p>{recipe.label}</p>
-<img alt="" src={recipe.image} />
-<p>servis sayısı: {recipe.yield}</p> */

@@ -10,7 +10,6 @@ function SearchDetails({ recipe }) {
       {recipe.map((item, index) => {
         return <FoodCard recipe={item.recipe} key={index} />;
       })}
-      <FoodCard />
     </div>
   );
 }
