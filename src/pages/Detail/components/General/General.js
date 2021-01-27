@@ -8,10 +8,25 @@ import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
 import { faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
+import { AuthContext } from "../../../../utility/AuthContext";
+import { useContext } from "react";
 
 const General = ({ recipe }) => {
+  const { currentUser } = useContext(AuthContext);
+  const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
+
   const clickHandler = () => {
-    addToStore(recipe);
+    if (userId) {
+      addToStore(recipe, userId).then((res) => {
+        if (res) {
+          console.log("veri stora eklendi");
+        } else {
+          console.log("user var ancak veri daha once eklenmis");
+        }
+      });
+    } else {
+      console.log("user olmadigi icin stora eklenmemedi");
+    }
   };
 
   return (

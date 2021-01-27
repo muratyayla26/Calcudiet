@@ -1,14 +1,16 @@
-import db from "./firestore";
-// verinin daha önce eklenip eklenmediğini kontrol edeceğimiz fonksiyon
-//eğer true dönerse daha önce veri eklenmiş demek
-//false dönerse veri store daha önce eklenmemiş
-export const alreadyAddedChecker = async (recipe) => {
+//verinin daha önce firestora eklenip eklenmediğini kontrol edeceğimiz fonksiyon
+//fonksiyon eğer true dönerse daha önce veri eklenmiş anlamina geliyor
+//fonksiyon false dönerse veri store daha önce eklenmemis anlamina geliyor.
+import { db } from "./firestore";
+
+export const alreadyAddedChecker = async (recipe, ownerId) => {
   let checker = false;
   try {
     const id = recipe.uri.split("_")[1];
     await db
       .collection("recipe")
       .where("id", "==", `${id}`)
+      .where("ownerId", "==", `${ownerId}`)
       .get()
       .then((response) => {
         return response.docs[0].data();
@@ -17,6 +19,5 @@ export const alreadyAddedChecker = async (recipe) => {
   } catch (error) {
     console.log("olmayan veri sorgusu hatasi");
   }
-  console.log(checker);
   return checker;
 };
