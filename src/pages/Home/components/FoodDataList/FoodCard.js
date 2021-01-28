@@ -9,6 +9,21 @@ import {AuthContext} from '../../../../utility/AuthContext'
 
 function FoodCard({ data }) {
 
+
+//ekleme fonskiyonuna eklencek düzeltilcek 
+  // if (userId) {
+  //   addToStore(recipe, userId).then((res) => {
+  //     if (res) {
+  //       console.log("veri stora eklendi");
+  //     } else {
+  //       console.log("user var ancak veri daha once eklenmis");
+  //     }
+  //   });
+  // } else {
+  //   console.log("user olmadigi icin stora eklenmemedi");
+  // }
+
+
   const { currentUser } = useContext(AuthContext);
   const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
 
