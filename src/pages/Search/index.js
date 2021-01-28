@@ -9,7 +9,7 @@ const Search = () => {
   return (
     <div>
       <h1 className={styles.header}>SearcPage</h1>
-      <SearchBar setRecipe={setRecipe} />
+      <SearchBar setRecipe={setRecipe}  />
       <div>{recipe ? <SearchDetails recipe={recipe} /> : ""}</div>
     </div>
   );
