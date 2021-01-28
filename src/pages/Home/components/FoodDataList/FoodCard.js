@@ -16,19 +16,19 @@ function FoodCard({ data }) {
       const longUrl = data.recipe.uri
       const url = longUrl.split('_')[1];
       setUrl(url)
-  })
+  },[setUrl,data.recipe.uri])
 
   const addToList = () => addToStore(data.recipe).then(response => console.log(response));
   const checkList = ()=> {
     alreadyAddedChecker(data.recipe).then(response=>setListStatus(response));
-    listStatus != false && addToList()
+    listStatus !== false && addToList()
     
   }
 
   return (
     <li className={styles.foodCard}>
       <div className={styles.cardHeader}>
-        <img className={styles.cardImg} src={data.recipe.image}></img>
+        <img className={styles.cardImg} src={data.recipe.image} alt="foods"/>
         <p className={styles.cardLabel}>{data.recipe.label}</p>
         <div className={styles.cardOptions}>
 
@@ -46,7 +46,7 @@ function FoodCard({ data }) {
         <div className="content">
           {' '}
          
-         <img src={data.recipe.image}/>
+         <img src={data.recipe.image} alt="food"/>
          <p><span>Calories:</span> {parseInt(data.recipe.calories)}kcal</p>
          <p><span>Fat:</span> {parseInt(data.recipe.totalNutrients.FAT.quantity)}g</p>
          <p><span>Sugar:</span> {parseInt(data.recipe.totalNutrients.SUGAR.quantity)}g</p>

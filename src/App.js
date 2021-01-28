@@ -5,31 +5,36 @@ import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Detail from "./pages/Detail";
 import User from "./pages/User";
-import styles from "./app.module.css"
+import LoginSignup from "./pages/LoginSignup";
+import { AuthProvider } from "./utility/AuthContext";
 
 function App() {
-
   return (
-    <Router>
-      <div>
-        <Nav />
-        <Switch>
-          <Route path="/" exact>
-            <Home />
-          </Route>
-          <Route path="/search">
-            <Search />
-          </Route>
-          <Route path="/detail/:id">
-            <Detail />
-          </Route>
-          <Route path="/user">
-            <User />
-          </Route>
-        </Switch>
-        <Footer />
-      </div>
-    </Router>
+    <AuthProvider>
+      <Router>
+        <div>
+          <Nav />
+          <Switch>
+            <Route path="/" exact>
+              <Home />
+            </Route>
+            <Route path="/search">
+              <Search />
+            </Route>
+            <Route path="/detail/:id">
+              <Detail />
+            </Route>
+            <Route path="/user">
+              <User />
+            </Route>
+            <Route path="/LoginSignup">
+              <LoginSignup />
+            </Route>
+          </Switch>
+          <Footer />
+        </div>
+      </Router>
+    </AuthProvider>
   );
 }
 

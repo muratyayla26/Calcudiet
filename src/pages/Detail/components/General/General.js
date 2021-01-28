@@ -1,4 +1,3 @@
-import { useEffect, useState } from "react";
 import { addToStore } from "../../../../utility/addToStore";
 import styles from "./general.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -9,26 +8,27 @@ import { faFacebookSquare } from "@fortawesome/free-brands-svg-icons";
 import { faTwitterSquare } from "@fortawesome/free-brands-svg-icons";
 import { faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
-import { faCheckSquare } from "@fortawesome/free-regular-svg-icons";
-import { alreadyAddedChecker } from "../../../../utility/alreadyAddedChecker";
+import { AuthContext } from "../../../../utility/AuthContext";
+import { useContext } from "react";
 
 const General = ({ recipe }) => {
-  const [added, setAdded] = useState(false);
-
-  useEffect(() => {
-    alreadyAddedChecker(recipe).then((response) => {
-      setAdded(response);
-    });
-  }, []);
+  const { currentUser } = useContext(AuthContext);
+  const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
 
   const clickHandler = () => {
-    addToStore(recipe);
-    alreadyAddedChecker(recipe).then((response) => {
-      setAdded(response);
-    });
+    if (userId) {
+      addToStore(recipe, userId).then((res) => {
+        if (res) {
+          console.log("veri stora eklendi");
+        } else {
+          console.log("user var ancak veri daha once eklenmis");
+        }
+      });
+    } else {
+      console.log("user olmadigi icin stora eklenmemedi");
+    }
   };
 
-  console.log(added);
   return (
     <div className={styles.container}>
       <div className={styles["img-container"]}>
@@ -37,21 +37,10 @@ const General = ({ recipe }) => {
       <div className={styles["text-container"]}>
         <p className={styles.name}>{recipe.label}</p>
         <div className={styles.footer}>
-          {added ? (
-            <div className={styles["add-list"]}>
-              <span>Already In List</span>
-              <FontAwesomeIcon
-                className={styles["faIcon"]}
-                icon={faCheckSquare}
-              />
-            </div>
-          ) : (
-            <div onClick={clickHandler} className={styles["add-list"]}>
-              <span>Add To Your</span>
-              <FontAwesomeIcon className={styles["faIcon"]} icon={faListUl} />
-            </div>
-          )}
-
+          <div onClick={clickHandler} className={styles["add-list"]}>
+            <span>Add To Your</span>
+            <FontAwesomeIcon className={styles["faIcon"]} icon={faListUl} />
+          </div>
           <a
             href={recipe.url}
             rel="noreferrer"

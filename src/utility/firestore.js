@@ -1,19 +1,18 @@
+//firestore ve firebase authenticaion configuration yapisi
 import firebase from "firebase";
-//import firestore from 'firebase/firestore';
-const settings = { timestampsInSnapshots: true };
+import "firebase/firestore";
+import "firebase/auth";
 
 const firebaseConfig = {
   apiKey: process.env.REACT_APP_FIRESTORE_KEY,
-  authDomain: "fir-andapi.firebaseapp.com",
-  projectId: "fir-andapi",
-  storageBucket: "fir-andapi.appspot.com",
-  messagingSenderId: process.env.REACT_APP_SENDER_ID,
+  authDomain: process.env.REACT_APP_FIRESTORE_AUTHDOMAIN,
+  projectId: process.env.REACT_APP_FIRESTORE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIRESTORE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIRESTORE_MESSAGING_ID,
   appId: process.env.REACT_APP_FIRESTORE_ID,
-  measurementId: "G-BDTRNRBW5N",
+  measurementId: process.env.REACT_APP_FIRESTORE_MEASUREMENT_ID,
 };
 
 firebase.initializeApp(firebaseConfig);
-firebase.firestore().settings(settings);
-const db = firebase.firestore();
-
-export default db;
+export const db = firebase.firestore();
+export const authentication = firebase.auth();
