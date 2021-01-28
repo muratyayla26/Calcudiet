@@ -11,13 +11,11 @@ import Loader from "react-loader-spinner";
 
 const Detail = () => {
   const { params } = useRouteMatch();
-  console.log(params.id);
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     search(params.id).then((response) => {
-      console.log(response);
       setRecipe(response);
       setLoading(false);
     });

@@ -1,10 +1,24 @@
+import SearchBar from "./components/SearchBar/SearchBar.js";
+import styles from "./index.module.scss";
+import SearchDetails from "./components/SearchDetails/SearchDetails.js";
+import { useState } from "react";
 
 const Search = () => {
-    return (
-        <div>
-            <h1>searchpage</h1>
-        </div>
-    )
-}
+  const [recipe, setRecipe] = useState(null);
+  console.log(recipe);
+  return (
+    <div>
+      <h1 className={styles.header}>searchpage</h1>
+      <SearchBar setRecipe={setRecipe} />
+      <div>
+        {
+            recipe ? <SearchDetails recipe={recipe} /> : ""
+        }
+      </div>
+
+ 
+    </div>
+  );
+};
 
 export default Search;
