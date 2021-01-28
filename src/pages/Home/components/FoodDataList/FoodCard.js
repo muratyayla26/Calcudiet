@@ -1,12 +1,16 @@
-import {useEffect, useState} from 'react';
+import {useEffect, useState,useContext} from 'react';
 import Popup from 'reactjs-popup';
 import styles from "./_foodDataList.module.scss";
 import '../Popups/homefoodpopup.css'
 import {Link} from "react-router-dom";
 import {addToStore} from '../../../../utility/addToStore'
 import {alreadyAddedChecker} from '../../../../utility/alreadyAddedChecker'
+import {AuthContext} from '../../../../utility/AuthContext'
 
 function FoodCard({ data }) {
+
+  const { currentUser } = useContext(AuthContext);
+  const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
 
   const [url, setUrl] = useState(null)
   const [listStatus, setListStatus] = useState(null)
@@ -18,7 +22,7 @@ function FoodCard({ data }) {
       setUrl(url)
   },[setUrl,data.recipe.uri])
 
-  const addToList = () => addToStore(data.recipe).then(response => console.log(response));
+  const addToList = () => addToStore(data.recipe,userId).then(response => console.log(response));
   const checkList = ()=> {
     alreadyAddedChecker(data.recipe).then(response=>setListStatus(response));
     listStatus !== false && addToList()
