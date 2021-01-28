@@ -1,14 +1,17 @@
-import db from "./firestore";
-//firestore veri ekleyeceğimiz fonksiyon
-// fonksiyon true dönüyorsa veri firestore eklenmiş anlamına geliyor
-// false dönerse ya daha önce eklenmiş veri, yada başka bir hata
-export const addToStore = async (recipe) => {
+//firestore veri eklemek icin kullanacagimiz fonksiyon
+//Fonksiyon eger true donduruyorsa veri basarili bir sekilde firestore eklendi.
+//fonksiyon false donduruyorsa veri firestora eklenemedi. Daha once aynı veri,
+//aynı kullanici icin eklenmis anlamina geliyor.
+import { db } from "./firestore";
+
+export const addToStore = async (recipe, ownerId) => {
   let checker = true;
   try {
     const id = recipe.uri.split("_")[1];
     await db
       .collection("recipe")
       .where("id", "==", `${id}`)
+      .where("ownerId", "==", `${ownerId}`)
       .get()
       .then((response) => {
         console.log(response.docs[0].data());
@@ -32,11 +35,8 @@ export const addToStore = async (recipe) => {
       calory: recipe.calories,
       nutrition: recipe.digest,
       id: recipe.uri.split("_")[1],
+      ownerId: ownerId,
     });
-    console.log("veri stora eklendi");
-  } else {
-    console.log("veri daha once stora eklendigi icin tekrar eklenmedi");
   }
-
   return checker;
 };

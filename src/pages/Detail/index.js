@@ -1,5 +1,5 @@
 import { search } from "./utility/edamam";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useContext } from "react";
 import { useRouteMatch } from "react-router-dom";
 import styles from "./styles/index.module.scss";
 import General from "./components/General/General";
@@ -49,6 +49,3 @@ const Detail = () => {
 };
 
 export default Detail;
-/*
-path="/detail/:id" bu yol app.jste route eklenecek
-<Link to={`/detail/${itemin_apiden gelen_Idsi}`}> tıklanılacak yere link verilecek*/

@@ -1,25 +1,17 @@
-import React from 'react'
-import styles from "./SearchDetails.module.scss"
-import FoodCard from "../FoodCard/FoodCard.js"
+import React from "react";
+import styles from "./SearchDetails.module.scss";
+import FoodCard from "../FoodCard/FoodCard.js";
 
-function SearchDetails({recipe}) {
+function SearchDetails({ recipe }) {
+  console.log("SearcDetails in içinde", recipe);
 
-    console.log("SearcDetails in içinde", recipe);
-
-    return (
-        <div className={styles.Details}>
-            {
-
-                recipe.map((item, index) => {
-                 return (
-                    <FoodCard recipe={item.recipe} key={index} />
-                 ) 
-                })
-
-            }
-            <FoodCard />
-        </div>
-    )
+  return (
+    <div className={styles.Details}>
+      {recipe.map((item, index) => {
+        return <FoodCard recipe={item.recipe} key={index} />;
+      })}
+    </div>
+  );
 }
 
-export default SearchDetails
+export default SearchDetails;
