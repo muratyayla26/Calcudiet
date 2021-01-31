@@ -34,7 +34,7 @@ const Nutrition = ({ calories, service, cautions, digest }) => {
           <p>Recommended Servings</p>
           <form onSubmit={submitHandler}>
             <input
-              className={inputError && styles["error-input"]}
+              className={inputError ? styles["error-input"] : undefined}
               name="service"
               onChange={changeHandler}
               value={serviceHolder}

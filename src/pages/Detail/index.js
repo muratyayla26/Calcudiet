@@ -8,16 +8,25 @@ import Ingredients from "./components/Ingredients/Ingredients";
 import Nutrition from "./components/Nutrition/Nutrition";
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
 import Loader from "react-loader-spinner";
+import { AuthContext } from "../../utility/AuthContext";
+import { alreadyAddedChecker } from "../../utility/alreadyAddedChecker";
 
 const Detail = () => {
+  const { currentUser } = useContext(AuthContext);
+  const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
+
   const { params } = useRouteMatch();
   const [recipe, setRecipe] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [alreadyAdded, setAlreadyAdded] = useState(null);
 
   useEffect(() => {
     search(params.id).then((response) => {
       setRecipe(response);
-      setLoading(false);
+      alreadyAddedChecker(response, userId).then((response) => {
+        setAlreadyAdded(response);
+        setLoading(false);
+      });
     });
   }, []);
 
@@ -29,7 +38,11 @@ const Detail = () => {
         </div>
       ) : (
         <div className={styles.container}>
-          <General recipe={recipe} />
+          <General
+            alreadyAdded={alreadyAdded}
+            setAlreadyAdded={setAlreadyAdded}
+            recipe={recipe}
+          />
           <div className={styles["sub-container"]}>
             <Ingredients
               ingredientLines={recipe.ingredientLines}

@@ -11,7 +11,7 @@ import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
 import { AuthContext } from "../../../../utility/AuthContext";
 import { useContext } from "react";
 
-const General = ({ recipe }) => {
+const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
   const { currentUser } = useContext(AuthContext);
   const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
 
@@ -37,10 +37,17 @@ const General = ({ recipe }) => {
       <div className={styles["text-container"]}>
         <p className={styles.name}>{recipe.label}</p>
         <div className={styles.footer}>
-          <div onClick={clickHandler} className={styles["add-list"]}>
-            <span>Add To Your</span>
-            <FontAwesomeIcon className={styles["faIcon"]} icon={faListUl} />
-          </div>
+          {alreadyAdded ? (
+            <div onClick={clickHandler} className={styles["add-list"]}>
+              <span>Remove From Your</span>
+              <FontAwesomeIcon className={styles["faIcon"]} icon={faListUl} />
+            </div>
+          ) : (
+            <div onClick={clickHandler} className={styles["add-list"]}>
+              <span>Add To Your</span>
+              <FontAwesomeIcon className={styles["faIcon"]} icon={faListUl} />
+            </div>
+          )}
           <a
             href={recipe.url}
             rel="noreferrer"
