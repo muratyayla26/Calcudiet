@@ -7,6 +7,7 @@ import NutritionLine from "../NutritionLine/NutritionLine";
 const Nutrition = ({ calories, service, cautions, digest }) => {
   const [serviceHolder, setServiceHolder] = useState(service);
   const [newService, setNewService] = useState(service);
+  const [inputError, setinputError] = useState(false);
 
   const changeHandler = (e) => {
     setServiceHolder(e.target.value);
@@ -16,6 +17,9 @@ const Nutrition = ({ calories, service, cautions, digest }) => {
     e.preventDefault();
     if (e.target.service.value > 0 && e.target.service.value < 50) {
       setNewService(e.target.service.value);
+      inputError && setinputError(false);
+    } else {
+      setinputError(true);
     }
   };
 
@@ -30,12 +34,18 @@ const Nutrition = ({ calories, service, cautions, digest }) => {
           <p>Recommended Servings</p>
           <form onSubmit={submitHandler}>
             <input
+              className={inputError && styles["error-input"]}
               name="service"
               onChange={changeHandler}
               value={serviceHolder}
             />
             <button type="submit">Set</button>
           </form>
+          {inputError && (
+            <p className={styles["error-message"]}>
+              value must be between 1-50
+            </p>
+          )}
         </div>
         <div className={styles["calory-calory"]}>
           <p>Calories/Serving</p>
