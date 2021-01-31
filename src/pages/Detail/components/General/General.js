@@ -17,13 +17,19 @@ const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
 
   const clickHandler = () => {
     if (userId) {
-      addToStore(recipe, userId).then((res) => {
-        if (res) {
-          console.log("veri stora eklendi");
-        } else {
-          console.log("user var ancak veri daha once eklenmis");
-        }
-      });
+      if (alreadyAdded) {
+        setAlreadyAdded(!alreadyAdded);
+        console.log("buraya remove fonksiyonu gelecek");
+      } else {
+        addToStore(recipe, userId).then((res) => {
+          if (res) {
+            setAlreadyAdded(!alreadyAdded);
+            console.log("veri stora eklendi");
+          } else {
+            console.log("baglanti hatasi");
+          }
+        });
+      }
     } else {
       console.log("user olmadigi icin stora eklenmemedi");
     }
