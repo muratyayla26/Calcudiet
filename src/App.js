@@ -1,6 +1,6 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import Nav from "./pages/Routes/Nav";
-import Footer from "./pages/Routes/Footer";
+//import Footer from "./pages/Routes/Footer";
 import Home from "./pages/Home";
 import Search from "./pages/Search";
 import Detail from "./pages/Detail";
@@ -31,7 +31,7 @@ function App() {
               <LoginSignup />
             </Route>
           </Switch>
-          <Footer />
+          {/* <Footer /> */}
         </div>
       </Router>
     </AuthProvider>

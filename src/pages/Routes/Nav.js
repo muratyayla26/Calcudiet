@@ -25,17 +25,18 @@ const Nav = () => {
 
     navbar.classList.toggle("showNav");
     ham.classList.toggle("showClose");
+    navbar.classList.contains("showNav")
+      ? (document.body.style.overflow = "hidden")
+      : (document.body.style.overflow = "visible");
   }
 
   return (
     <div className={styles.navContainer}>
-
       <Link to="/">
-
-      <div className={styles.logoContainer}>
-        <img className={styles.logo} src={logo} alt="logo" />
-        <h1 className={styles.header}>Calcudiet</h1>
-      </div>
+        <div className={styles.logoContainer}>
+          <img className={styles.logo} src={logo} alt="logo" />
+          <h1 className={styles.header}>Calcudiet</h1>
+        </div>
       </Link>
 
       <ul className={styles.navList}>
@@ -45,11 +46,12 @@ const Nav = () => {
         <li className={styles.listElement}>
           <Link to="/search">Search</Link>
         </li>
+
         {userId && (
           <li className={styles.listElement}>
             <Link to="/user">User</Link>
           </li>
-        ) }
+        )}
         {userId ? (
           <li onClick={logoutHandler} className={styles.listElement}>
             <Link to="/">Logout</Link>
@@ -73,9 +75,20 @@ const Nav = () => {
           <li onClick={toggleHamburger}>
             <Link to="/search">Search</Link>
           </li>
-          <li onClick={toggleHamburger}>
-            <Link to="/user">User</Link>
-          </li>
+            {userId && (
+              <li onClick={toggleHamburger} className={styles.listElement}>
+                <Link to="/user">User</Link>
+              </li>
+            )}
+            {userId ? (
+              <li  onClick={logoutHandler} className={styles.listElement}>
+                <Link to="/">Logout</Link>
+              </li>
+            ) : (
+              <li  onClick={toggleHamburger} className={styles.listElement}>
+                <Link to="/LoginSignup">Login</Link>
+              </li>
+            )}
         </ul>
       </div>
     </div>
