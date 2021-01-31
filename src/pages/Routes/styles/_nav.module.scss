@@ -5,8 +5,18 @@
   display: flex;
   width: 100%;
   min-height: 60px;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
+  background-color: #fff;
   position: relative;
+
+  a {
+    text-decoration: none;
+    color: black;
+  }
+
+  a:visited {
+    color: black;
+  }
 }
 
 .navList {
@@ -78,27 +88,23 @@
   }
 }
 
-
 //hamburger button menu
 
-
-.ham{
-  display:none
+.ham {
+  display: none;
 }
 
 @media only screen and (max-width: 500px) {
-  .ham{
-    display:inline-block;
+  .ham {
+    display: inline-block;
   }
-
- 
 }
 
-@media only screen and  (max-width: 992px) {
-  .ham{
-    display:block;
+@media only screen and (max-width: 992px) {
+  .ham {
+    display: block;
   }
-  .navList{
-    display:none;
+  .navList {
+    display: none;
   }
 }

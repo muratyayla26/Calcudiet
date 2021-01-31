@@ -29,10 +29,14 @@ const Nav = () => {
 
   return (
     <div className={styles.navContainer}>
+
+      <Link to="/">
+
       <div className={styles.logoContainer}>
         <img className={styles.logo} src={logo} alt="logo" />
         <h1 className={styles.header}>Calcudiet</h1>
       </div>
+      </Link>
 
       <ul className={styles.navList}>
         <li className={styles.listElement}>
@@ -41,20 +45,18 @@ const Nav = () => {
         <li className={styles.listElement}>
           <Link to="/search">Search</Link>
         </li>
-        {userId ? (
+        {userId && (
           <li className={styles.listElement}>
             <Link to="/user">User</Link>
           </li>
-        ) : (
-          <div></div>
-        )}
+        ) }
         {userId ? (
           <li onClick={logoutHandler} className={styles.listElement}>
-            LOGOUT
+            <Link to="/">Logout</Link>
           </li>
         ) : (
           <li className={styles.listElement}>
-            <Link to="/LoginSignup">Login/Signup</Link>
+            <Link to="/LoginSignup">Login</Link>
           </li>
         )}
       </ul>
