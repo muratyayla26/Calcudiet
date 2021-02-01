@@ -1,7 +1,7 @@
 import axios from "axios";
 
-const apiKey = process.env.REACT_APP_EDAMAM_KEY;
-const apiId = process.env.REACT_APP_EDAMAM_ID;
+const apiKey = process.env.REACT_APP_EDAMAM_KEY_A;
+const apiId = process.env.REACT_APP_EDAMAM_ID_A;
 
 export const fetchData = async (query) => {
   const url = `https://api.edamam.com/search?q=${query}&from=0&to=8&app_id=${apiId}&app_key=${apiKey}`;

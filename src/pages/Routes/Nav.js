@@ -75,20 +75,20 @@ const Nav = () => {
           <li onClick={toggleHamburger}>
             <Link to="/search">Search</Link>
           </li>
-            {userId && (
-              <li onClick={toggleHamburger} className={styles.listElement}>
-                <Link to="/user">User</Link>
-              </li>
-            )}
-            {userId ? (
-              <li  onClick={logoutHandler} className={styles.listElement}>
-                <Link to="/">Logout</Link>
-              </li>
-            ) : (
-              <li  onClick={toggleHamburger} className={styles.listElement}>
-                <Link to="/LoginSignup">Login</Link>
-              </li>
-            )}
+          {userId && (
+            <li onClick={toggleHamburger} className={styles.listElement}>
+              <Link to="/user">User</Link>
+            </li>
+          )}
+          {userId ? (
+            <li onClick={logoutHandler} className={styles.listElement}>
+              <Link to="/">Logout</Link>
+            </li>
+          ) : (
+            <li onClick={toggleHamburger} className={styles.listElement}>
+              <Link to="/LoginSignup">Login</Link>
+            </li>
+          )}
         </ul>
       </div>
     </div>

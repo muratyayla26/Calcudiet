@@ -3,8 +3,6 @@ import styles from "./SearchDetails.module.scss";
 import FoodCard from "../FoodCard/FoodCard.js";
 
 function SearchDetails({ recipe }) {
-  console.log("SearcDetails in içinde", recipe);
-
   return (
     <div className={styles.Details}>
       {recipe.map((item, index) => {

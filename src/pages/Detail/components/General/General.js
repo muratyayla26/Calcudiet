@@ -10,6 +10,7 @@ import { faYoutubeSquare } from "@fortawesome/free-brands-svg-icons";
 import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
 import { AuthContext } from "../../../../utility/AuthContext";
 import { useContext } from "react";
+import Popup from "reactjs-popup";
 
 const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
   const { currentUser } = useContext(AuthContext);
@@ -43,16 +44,41 @@ const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
       <div className={styles["text-container"]}>
         <p className={styles.name}>{recipe.label}</p>
         <div className={styles.footer}>
-          {alreadyAdded ? (
-            <div onClick={clickHandler} className={styles["add-list"]}>
-              <span>Remove From Your</span>
-              <FontAwesomeIcon className={styles["faIcon"]} icon={faListUl} />
+          {userId ? (
+            <div className={styles["add-list-container"]}>
+              {alreadyAdded ? (
+                <div onClick={clickHandler} className={styles["add-list"]}>
+                  <span>Remove From Your</span>
+                  <FontAwesomeIcon
+                    className={styles["faIcon"]}
+                    icon={faListUl}
+                  />
+                </div>
+              ) : (
+                <div onClick={clickHandler} className={styles["add-list"]}>
+                  <span>Add To Your</span>
+                  <FontAwesomeIcon
+                    className={styles["faIcon"]}
+                    icon={faListUl}
+                  />
+                </div>
+              )}
             </div>
           ) : (
-            <div onClick={clickHandler} className={styles["add-list"]}>
-              <span>Add To Your</span>
-              <FontAwesomeIcon className={styles["faIcon"]} icon={faListUl} />
-            </div>
+            <Popup
+              trigger={
+                <div className={styles["add-list"]}>
+                  <span>Add To Your</span>
+                  <FontAwesomeIcon
+                    className={styles["faIcon"]}
+                    icon={faListUl}
+                  />
+                </div>
+              }
+              position="top center"
+            >
+              <p>Please login or sign up.</p>
+            </Popup>
           )}
           <a
             href={recipe.url}

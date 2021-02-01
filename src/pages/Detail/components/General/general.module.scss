@@ -71,6 +71,11 @@
     font-size: $secondary-font-size;
     font-weight: $primary-weight;
   }
+  &-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+  }
 }
 
 .see-instructions {
@@ -113,5 +118,4 @@
     font-size: 25px;
   }
 }
-
 @import "mobile.module";

@@ -3,11 +3,9 @@ import styles from "./FoodCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
 
 function FoodCard({ recipe }) {
-  console.log(recipe);
-  console.log(recipe.label);
-
   return (
     <div className={styles.container}>
       <div className={styles.FoodCard}>
@@ -26,7 +24,12 @@ function FoodCard({ recipe }) {
           </p>
           <div className={styles.icon}>
             <FontAwesomeIcon className={styles["Heart"]} icon={faHeart} />{" "}
-            <FontAwesomeIcon className={styles["Utensils"]} icon={faUtensils} />
+            <Link to={`/detail/${recipe.uri.split("_")[1]}`}>
+              <FontAwesomeIcon
+                className={styles["Utensils"]}
+                icon={faUtensils}
+              />
+            </Link>
           </div>
         </div>
       </div>

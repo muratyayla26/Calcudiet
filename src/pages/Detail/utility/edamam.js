@@ -10,7 +10,6 @@ export const search = async (inputId) => {
 
   try {
     const { data } = await axios.get(urlToFetch);
-    console.log(data);
     const recipe = {
       label: data[0].label,
       image: data[0].image,
