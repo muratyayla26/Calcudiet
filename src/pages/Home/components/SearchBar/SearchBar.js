@@ -15,7 +15,7 @@ function SearchBar({fetch}) {
                 <input type='text' className={styles.searchInput}value={inputValue} onChange={(e)=>setInputValue(e.target.value)} placeholder="Search"/>
                 <span onClick={(e) =>fetch(inputValue,e)}  className={styles.barBtn}><FontAwesomeIcon icon={faSearch} /></span>
             </form>
-            <Link to={`/search/${inputValue}`}  className={styles.viewMore}>View more...</Link>
+            <Link to={`/search?q=${inputValue}`}  className={styles.viewMore}>View more...</Link>
 
 
             {/* <a href='#' className={styles.viewMore}>View more...</a> */}
