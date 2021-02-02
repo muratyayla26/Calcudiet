@@ -4,14 +4,19 @@ import SearchDetails from "./components/SearchDetails/SearchDetails.js";
 import { useState, useEffect } from "react";
 import { useLocation } from "react-router-dom";
 
+function useQuery() {
+  return new URLSearchParams(useLocation().search);
+}
+
 const Search = () => {
+  let query = useQuery();
   const [recipe, setRecipe] = useState(null);
   const [searchKey, setSearchKey] = useState("");
   const [loading, setLoading] = useState(true);
-  const searchKeyHolder = useLocation().search.split("=");
 
   useEffect(() => {
-    setSearchKey(searchKeyHolder[1]);
+    const queryKeyword = query.get("q");
+    setSearchKey(queryKeyword);
     setLoading(false);
   }, [recipe]);
 
