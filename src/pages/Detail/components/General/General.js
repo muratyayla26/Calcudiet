@@ -11,6 +11,7 @@ import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
 import { AuthContext } from "../../../../utility/AuthContext";
 import { useContext } from "react";
 import Popup from "reactjs-popup";
+import { deleteFromStore } from "../../../../utility/deleteFromStore";
 
 const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
   const { currentUser } = useContext(AuthContext);
@@ -20,7 +21,10 @@ const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
     if (userId) {
       if (alreadyAdded) {
         setAlreadyAdded(!alreadyAdded);
-        console.log("buraya remove fonksiyonu gelecek");
+        let recipeId = recipe.uri.split("_")[1];
+        deleteFromStore(recipeId, userId).then((res) => {
+          console.log("veri silindi");
+        });
       } else {
         addToStore(recipe, userId).then((res) => {
           if (res) {
