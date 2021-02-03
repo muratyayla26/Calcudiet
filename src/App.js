@@ -9,33 +9,36 @@ import LoginSignup from "./pages/LoginSignup";
 import { AuthProvider } from "./utility/AuthContext";
 
 function App() {
-  return (
-    <AuthProvider>
-      <Router>
-        <div>
-          <Nav />
-          <Switch>
-            <Route path="/" exact>
-              <Home />
-            </Route>
-            <Route path="/search">
-              <Search />
-            </Route>
-            <Route path="/detail/:id">
-              <Detail />
-            </Route>
-            <Route path="/user">
-              <User />
-            </Route>
-            <Route path="/LoginSignup">
-              <LoginSignup />
-            </Route>
-          </Switch>
-          {/* <Footer /> */}
-        </div>
-      </Router>
-    </AuthProvider>
-  );
+	return (
+		<AuthProvider>
+			<Router>
+				<div>
+					<Nav />
+					<Switch>
+						<Route path="/" exact>
+							<Home />
+						</Route>
+						<Route path="/search">
+							<Search />
+						</Route>
+						<Route path="/detail/:id">
+							<Detail />
+						</Route>
+						{/* todo: below should be protected route
+					https://ui.dev/react-router-v5-protected-routes-authentication/ */}
+						<Route path="/user">
+							<User />
+						</Route>
+						{/* todo: login & signup should be seperate */}
+						<Route path="/LoginSignup">
+							<LoginSignup />
+						</Route>
+					</Switch>
+					{/* <Footer /> */}
+				</div>
+			</Router>
+		</AuthProvider>
+	);
 }
 
 export default App;
