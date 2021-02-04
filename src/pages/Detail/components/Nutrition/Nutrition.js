@@ -42,9 +42,7 @@ const Nutrition = ({ calories, service, cautions, digest }) => {
             <button type="submit">Set</button>
           </form>
           {inputError && (
-            <p className={styles["error-message"]}>
-              value must be between 1-50
-            </p>
+            <p className={styles["error-message"]}>between 1-50</p>
           )}
         </div>
         <div className={styles["calory-calory"]}>
@@ -52,7 +50,11 @@ const Nutrition = ({ calories, service, cautions, digest }) => {
           <p>{Math.ceil(Math.ceil(calories) / newService)}</p>
         </div>
       </div>
-      <hr className={styles["special-hr"]} />
+      <hr
+        className={
+          inputError ? styles["special-hr-error"] : styles["special-hr"]
+        }
+      />
       <div>
         {cautions.length !== 0 && cautions[0] !== "FODMAP" && cautions[0] && (
           <div>

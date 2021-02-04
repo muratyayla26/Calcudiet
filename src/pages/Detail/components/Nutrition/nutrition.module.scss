@@ -35,6 +35,9 @@
 .special-hr {
   margin: 10px auto 10px auto;
 }
+.special-hr-error {
+  margin: 0px auto 10px auto;
+}
 
 .bottom-hr {
   margin: 10px auto 20px auto;
@@ -42,7 +45,7 @@
 
 .calory-container {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
 }
 
 .calory-serving {
@@ -63,6 +66,7 @@
 
   .error-message {
     color: red;
+    margin-bottom: 0;
   }
 
   input {
