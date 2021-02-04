@@ -23,7 +23,7 @@ const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
         setAlreadyAdded(!alreadyAdded);
         let recipeId = recipe.uri.split("_")[1];
         deleteFromStore(recipeId, userId).then((res) => {
-          console.log("veri silindi");
+          console.log("veri basariyla silindi");
         });
       } else {
         addToStore(recipe, userId).then((res) => {
