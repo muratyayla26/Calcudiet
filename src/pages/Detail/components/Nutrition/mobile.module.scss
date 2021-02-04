@@ -4,3 +4,15 @@
     min-width: 100%;
   }
 }
+
+@media (max-width: 768px) {
+  .calory-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .calory-serving {
+    margin-bottom: 10px;
+  }
+}

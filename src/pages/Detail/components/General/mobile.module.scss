@@ -46,3 +46,27 @@
     margin: 10px auto 10px auto;
   }
 }
+
+@media (max-width: 768px) {
+  .img-container {
+    margin-top: 0px;
+    margin-bottom: 0px;
+  }
+  .footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .add-list {
+    margin: 10px auto 10px auto;
+  }
+
+  .see-instructions {
+    margin: 10px auto 10px auto;
+  }
+
+  .share-container {
+    margin: 10px auto 10px auto;
+  }
+}
