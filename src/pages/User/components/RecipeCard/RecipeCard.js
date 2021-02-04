@@ -4,12 +4,11 @@ import styles from "./RecipeCard.module.css";
 const RecipeCard = ({ recipe }) => {
 	return (
 		<div className={styles.propertyCard}>
-			<a href="#">
-				<div className={styles.propertyImage}>
-					<img className={styles.cardImage} src={recipe.image} alt=""></img>
-					<div className={styles.propertyImageTitle}>{recipe.name}</div>
-				</div>
-			</a>
+			<div className={styles.propertyImage}>
+				<img className={styles.cardImage} src={recipe.image} alt=""></img>
+				<div className={styles.propertyImageTitle}>{recipe.name}</div>
+			</div>
+
 			<div className={styles.propertyDescription}>
 				<h5>{recipe.name}</h5>
 				<p>

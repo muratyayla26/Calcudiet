@@ -18,7 +18,11 @@ const User = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 
-	return loading ? <div>Loading...</div> : <RecipeList recipes={data} />;
+	return loading ? (
+		<div>Loading...</div>
+	) : (
+		<RecipeList recipes={data} currentUser={currentUser} />
+	);
 };
 
 export default User;

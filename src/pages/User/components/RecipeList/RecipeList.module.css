@@ -28,12 +28,42 @@ p {
 	justify-content: center;
 }
 
+.recipeSearch {
+	padding: 10px;
+	margin-left: 5%;
+	width: 250px;
+	background: rgba(86, 214, 86, 0.75);
+	border-radius: 10px;
+}
+
+.recipeSearch input {
+	width: 100%;
+	height: 95%;
+	padding: 5%;
+	margin: auto;
+	font-weight: 700;
+	color: rgba(21, 22, 21, 0.75);
+	font-size: 18px;
+}
+
+.recipeSearch input::placeholder {
+	color: rgba(86, 214, 86, 0.75);
+	font-weight: 400;
+	font-size: 14px;
+}
+
+.recipeSearch input:focus {
+	outline: none !important;
+	border: 2px solid rgb(67, 226, 88);
+	border-radius: 10px;
+	box-shadow: 0 0 10px #719ece;
+}
+
 .card {
 	padding: 10px;
 	margin: 10px auto;
 	border: 2px solid black;
 	border-radius: 10px;
-	height: 90vh;
 	width: 90%;
 	display: flex;
 	flex-wrap: wrap;
@@ -107,4 +137,9 @@ p {
 
 .propertyCard:hover .propertyImageTitle {
 	opacity: 1;
+}
+
+.userInfo {
+	margin-top: 450px;
+	padding: 30px;
 }

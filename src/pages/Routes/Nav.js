@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../utility/AuthContext";
 import { authentication } from "../../utility/firestore";
 import { useHistory } from "react-router";
-import { Link, NavLink } from "react-router-dom";
+import { Link } from "react-router-dom";
 import styles from "./styles/_nav.module.scss";
 import "./styles/nav-ham-menu.css";
 import logo from "./img/logo.png";
@@ -32,41 +32,33 @@ const Nav = () => {
 
   return (
     <div className={styles.navContainer}>
-      <NavLink to="/">
+      <Link to="/">
         <div className={styles.logoContainer}>
           <img className={styles.logo} src={logo} alt="logo" />
           <h1 className={styles.header}>Calcudiet</h1>
         </div>
-      </NavLink>
+      </Link>
 
       <ul className={styles.navList}>
         <li className={styles.listElement}>
-          <NavLink activeClassName={styles["active"]} exact to="/">
-            Home
-          </NavLink>
+          <Link to="/">Home</Link>
         </li>
         <li className={styles.listElement}>
-          <NavLink activeClassName={styles["active"]} to="/search">
-            Search
-          </NavLink>
+          <Link to="/search">Search</Link>
         </li>
 
         {userId && (
           <li className={styles.listElement}>
-            <NavLink activeClassName={styles["active"]} to="/user">
-              User
-            </NavLink>
+            <Link to="/user">User</Link>
           </li>
         )}
         {userId ? (
           <li onClick={logoutHandler} className={styles.listElement}>
-            <NavLink to="/">Logout</NavLink>
+            <Link to="/">Logout</Link>
           </li>
         ) : (
           <li className={styles.listElement}>
-            <NavLink activeClassName={styles["active"]} to="/LoginSignup">
-              Login
-            </NavLink>
+            <Link to="/LoginSignup">Login</Link>
           </li>
         )}
       </ul>

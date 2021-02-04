@@ -1,9 +1,9 @@
 // BMR, VKE ve günlük kalori gereksinimini hesaplar.
 
-export const bmrData = (weight, height, age, sex, pal) => {
+export const bmrData = (weight, height, age, gender, pal) => {
 	let palCoef;
-	let sexCoef = (sex) => {
-		if (sex === "woman") {
+	let genderCoef = (gender) => {
+		if (gender === "woman") {
 			return -161;
 		} else {
 			return +5;
@@ -11,22 +11,22 @@ export const bmrData = (weight, height, age, sex, pal) => {
 	};
 
 	switch (pal) {
-		case 1:
+		case "1":
 			palCoef = 1.2;
 			break;
-		case 2:
+		case "2":
 			palCoef = 1.375;
 			break;
-		case 3:
+		case "3":
 			palCoef = 1.55;
 			break;
-		case 4:
+		case "4":
 			palCoef = 1.725;
 			break;
-		case 5:
+		case "5":
 			palCoef = 1.9;
 			break;
-		case 6:
+		case "6":
 			palCoef = 2.3;
 			break;
 		default:
@@ -34,7 +34,7 @@ export const bmrData = (weight, height, age, sex, pal) => {
 			break;
 	}
 
-	let bmr = 10 * weight + 6.25 * height - 5 * age + sexCoef(sex);
+	let bmr = 10 * weight + 6.25 * height - 5 * age + genderCoef(gender);
 
 	let vke = weight / (height / 100) ** 2;
 
