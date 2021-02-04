@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { AuthContext } from "../../utility/AuthContext";
 import { authentication } from "../../utility/firestore";
 import { useHistory } from "react-router";
-import { Link } from "react-router-dom";
+import { Link, NavLink } from "react-router-dom"; //Nav stillendirilecek
 import styles from "./styles/_nav.module.scss";
 import "./styles/nav-ham-menu.css";
 import logo from "./img/logo.png";

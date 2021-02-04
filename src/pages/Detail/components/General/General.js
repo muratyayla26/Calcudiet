@@ -20,7 +20,10 @@ const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
     if (userId) {
       if (alreadyAdded) {
         setAlreadyAdded(!alreadyAdded);
-        console.log("buraya remove fonksiyonu gelecek");
+        let recipeId = recipe.uri.split("_")[1];
+        deleteFromStore(recipeId, userId).then((res) => {
+          console.log("veri basariyla silindi");
+        });
       } else {
         addToStore(recipe, userId).then((res) => {
           if (res) {
