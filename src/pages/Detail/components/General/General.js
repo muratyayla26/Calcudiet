@@ -11,6 +11,7 @@ import { faWhatsappSquare } from "@fortawesome/free-brands-svg-icons";
 import { AuthContext } from "../../../../utility/AuthContext";
 import { useContext } from "react";
 import Popup from "reactjs-popup";
+import { deleteFromStore } from "../../../../utility/deleteFromStore";
 
 const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
   const { currentUser } = useContext(AuthContext);
