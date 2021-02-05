@@ -2,7 +2,15 @@ import { AuthContext } from "../../utility/AuthContext";
 import { useContext, useEffect, useState } from "react";
 import { getDataFromStore } from "../../utility/getDataFromStore";
 import RecipeList from "./components/RecipeList/RecipeList";
+<<<<<<< HEAD
 ////
+=======
+<<<<<<< HEAD
+////
+=======
+//
+>>>>>>> ac836210db7680deddc58949dca2bfa0675f1f64
+>>>>>>> 41f2d46963eab7657f786d15ca9cb44fa5adb2f5
 const User = () => {
 	const { currentUser } = useContext(AuthContext);
 	const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
