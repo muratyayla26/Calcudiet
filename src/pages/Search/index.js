@@ -10,10 +10,11 @@ function useQuery() {
 
 const Search = () => {
   let query = useQuery();
-  const [recipe, setRecipe] = useState(null);
+  const [recipe, setRecipe] = useState([]);
   const [searchKey, setSearchKey] = useState("");
   const [loading, setLoading] = useState(true);
-
+  const [range, setRange] = useState({ from: 0, to: 10 });
+  
   useEffect(() => {
     const queryKeyword = query.get("q");
     setSearchKey(queryKeyword);
@@ -27,10 +28,19 @@ const Search = () => {
       ) : (
         <div>
           <h1 className={styles.header}>SearcPage</h1>
-          <SearchBar searchKey={searchKey} setRecipe={setRecipe} />
+          <SearchBar
+            searchKey={searchKey}
+            setSearchKey={setSearchKey}
+            setRecipe={setRecipe}
+            range={range}
+          />
           <div>
             {recipe ? (
-              <SearchDetails recipe={recipe} searchKey={searchKey} />
+              <SearchDetails
+                recipe={recipe}
+                searchKey={searchKey}
+                setRange={setRange}
+              />
             ) : (
               ""
             )}
