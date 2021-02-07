@@ -13,7 +13,7 @@ const Search = () => {
   const [recipe, setRecipe] = useState([]);
   const [searchKey, setSearchKey] = useState("");
   const [loading, setLoading] = useState(true);
-  const [range, setRange] = useState({ from: 0, to: 10 });
+  const [range, setRange] = useState({ from: 0, to: 30 });
   
   useEffect(() => {
     const queryKeyword = query.get("q");

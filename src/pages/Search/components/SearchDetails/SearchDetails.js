@@ -9,7 +9,7 @@ function SearchDetails({ recipe, setRange }) {
   const handleInfinite = () => {
     console.log("en alttayim");
     setRange((prev) => {
-      return { from: prev.from + 10, to: prev.to + 10 };
+      return { from: prev.from + 30, to: prev.to + 30 };
     });
   };
 

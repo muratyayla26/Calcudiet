@@ -3,13 +3,13 @@ import { useState, useEffect, useContext } from "react";
 import { useRouteMatch } from "react-router-dom";
 import styles from "./styles/index.module.scss";
 import General from "./components/General/General";
-import { infos } from "./utility/temporary";
+//import { infos } from "./utility/temporary";
 import Ingredients from "./components/Ingredients/Ingredients";
 import Nutrition from "./components/Nutrition/Nutrition";
-import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
-import Loader from "react-loader-spinner";
 import { AuthContext } from "../../utility/AuthContext";
 import { alreadyAddedChecker } from "../../utility/alreadyAddedChecker";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 
 const Detail = () => {
   const { currentUser } = useContext(AuthContext);
@@ -25,7 +25,7 @@ const Detail = () => {
       setRecipe(response);
       alreadyAddedChecker(response, userId).then((response) => {
         setAlreadyAdded(response);
-        setLoading(false);
+        setLoading(true);
       });
     });
   }, []);
@@ -33,8 +33,12 @@ const Detail = () => {
   return (
     <div>
       {loading ? (
-        <div className={styles.loader}>
-          <Loader type="Oval" color="#000" height={40} width={40} />
+        <div className={styles.spinnerContainer}>
+          <FontAwesomeIcon
+            className={styles["faSpinner"]}
+            icon={faCircleNotch}
+            spin
+          />
         </div>
       ) : (
         <div className={styles.container}>
