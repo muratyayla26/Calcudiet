@@ -6,9 +6,6 @@ import { useHistory } from "react-router-dom";
 const SearchBar = ({ setRecipe, searchKey, range, setSearchKey }) => {
   let history = useHistory();
 
-  console.log(range, "bar ici range");
-  console.log(searchKey, "bar ici search key");
-
   useEffect(() => {
     if (searchKey) {
       fetchData(searchKey, range.from, range.to).then((response) => {

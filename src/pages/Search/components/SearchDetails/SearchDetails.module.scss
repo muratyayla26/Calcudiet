@@ -1,9 +1,23 @@
-.Details{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
-    max-width: 1300px;
-    margin: 0 auto;
-    margin-bottom: 40px;
+.Details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  max-width: 1300px;
+  margin: 0 auto;
+  margin-bottom: 40px;
+}
+.spinner-container {
+  width: fit-content;
+  margin: 50px auto;
+}
+.faSpinner {
+  font-size: 40px;
+  color: green;
+}
+.end-message {
+  color: green;
+  text-align: center;
+  font-size: 20px;
+  font-family: Arial, Helvetica, sans-serif;
 }

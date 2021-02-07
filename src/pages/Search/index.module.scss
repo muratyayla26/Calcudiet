@@ -1,15 +1,14 @@
 @media only screen and (max-width: 480px) {
-  .mainContent{
-      display:flex;
-      flex-direction: column-reverse;
+  .mainContent {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
-
-@media only screen and (min-width: 500px) and (max-width:768px) {
-  .mainContent{
-      display:flex;
-      flex-direction: column-reverse;
+@media only screen and (min-width: 500px) and (max-width: 768px) {
+  .mainContent {
+    display: flex;
+    flex-direction: column-reverse;
   }
 }
 
@@ -17,4 +16,11 @@
   text-align: center;
   margin-top: 20px;
 }
-
+.spinner-container {
+  width: fit-content;
+  margin: 50px auto;
+}
+.faSpinner {
+  font-size: 40px;
+  color: green;
+}

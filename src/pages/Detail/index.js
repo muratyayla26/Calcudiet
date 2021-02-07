@@ -25,7 +25,7 @@ const Detail = () => {
       setRecipe(response);
       alreadyAddedChecker(response, userId).then((response) => {
         setAlreadyAdded(response);
-        setLoading(true);
+        setLoading(false);
       });
     });
   }, []);
@@ -33,7 +33,7 @@ const Detail = () => {
   return (
     <div>
       {loading ? (
-        <div className={styles.spinnerContainer}>
+        <div className={styles["spinner-container"]}>
           <FontAwesomeIcon
             className={styles["faSpinner"]}
             icon={faCircleNotch}

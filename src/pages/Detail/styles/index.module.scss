@@ -12,11 +12,12 @@
   justify-content: space-between;
 }
 
-.spinnerContainer {
+.spinner-container {
   width: fit-content;
   margin: 50px auto;
 }
 .faSpinner {
-  font-size: 50px;
+  font-size: 40px;
+  color: green;
 }
 @import "mobile.module";
