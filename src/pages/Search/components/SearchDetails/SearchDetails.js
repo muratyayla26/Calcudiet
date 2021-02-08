@@ -8,7 +8,7 @@ import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 function SearchDetails({ recipe, setRange, searchKey }) {
   const handleInfinite = () => {
     setRange((prev) => {
-      return { from: prev.from + 35, to: prev.to + 35 };
+      return { from: prev.from + 37, to: prev.to + 37 };
     });
   };
 
@@ -17,7 +17,7 @@ function SearchDetails({ recipe, setRange, searchKey }) {
       <InfiniteScroll
         dataLength={recipe.length}
         next={() => handleInfinite()}
-        hasMore={recipe.length >= 100 ? false : true}
+        hasMore={recipe.length >= 96 ? false : true}
         scrollThreshold={1}
         endMessage={
           <p className={styles["end-message"]}>You have seen it all :)</p>

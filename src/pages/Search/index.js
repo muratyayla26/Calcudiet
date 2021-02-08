@@ -39,8 +39,10 @@ const Search = () => {
           <SearchBar
             searchKey={searchKey}
             setSearchKey={setSearchKey}
+            recipe={recipe}
             setRecipe={setRecipe}
             range={range}
+            setRange={setRange}
           />
           <div>
             {recipe ? (

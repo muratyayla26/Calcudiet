@@ -3,11 +3,18 @@ import styles from "./SearchBar.module.scss";
 import { fetchData } from "../FetchData";
 import { useHistory } from "react-router-dom";
 
-const SearchBar = ({ setRecipe, searchKey, range, setSearchKey }) => {
+const SearchBar = ({
+  recipe,
+  setRecipe,
+  searchKey,
+  range,
+  setRange,
+  setSearchKey,
+}) => {
   let history = useHistory();
 
   useEffect(() => {
-    if (searchKey) {
+    if ((searchKey && range.from > 0) || (searchKey && recipe.length === 0)) {
       fetchData(searchKey, range.from, range.to).then((response) => {
         setRecipe((prev) => {
           return [...prev, ...response];
@@ -18,6 +25,15 @@ const SearchBar = ({ setRecipe, searchKey, range, setSearchKey }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
+    if (recipe.length > 0) {
+      fetchData(e.target.query.value, 0, 35).then((response) => {
+        setRecipe(response);
+        history.push(`/search?q=${e.target.query.value}`);
+        setSearchKey(e.target.query.value);
+        setRange({ from: 0, to: 35 });
+      });
+      return;
+    }
     fetchData(e.target.query.value, range.from, range.to).then((response) => {
       setRecipe(response);
       history.push(`/search?q=${e.target.query.value}`);
