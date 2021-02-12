@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./RecipeList.module.css";
+import styles from "./RecipeList.module.scss";
 import RecipeCard from "../RecipeCard/RecipeCard";
 import UserInfo from "../../UserInfo/UserInfo";
 
@@ -17,6 +17,7 @@ const RecipeList = ({ recipes }) => {
 	return (
 		<>
 			<div className={styles.titleHolder}>
+				
 				<h2 className={styles.recipeTitle}>Recipe List</h2>
 			</div>
 			<div className={styles.recipeSearch}>

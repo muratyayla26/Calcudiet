@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Open+Sans:wght@300;400;700&display=swap");
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Slabo+27px&display=swap');
 
 .navContainer {
   display: flex;
@@ -7,6 +8,7 @@
   box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.2), 0 1px 1px 0 rgba(0, 0, 0, 0.19);
   background-color: #fff;
   position: relative;
+  padding: 10px;
 
   a {
     text-decoration: none;
@@ -21,20 +23,21 @@
 .navList {
   display: flex;
   min-width: 20%;
-  justify-content: space-evenly;
+  justify-content: space-between;
   position: absolute;
   right: 0;
   margin-top: 20px;
-  margin-right: 150px;
+  margin-right: 10%;
   .listElement {
     list-style: none;
     font-size: 1.3rem;
-    font-family: "Nunito", sans-serif;
+    font-family: 'Raleway', sans-serif;
   }
   a {
     text-decoration: none;
     color: green;
-    font-weight: 600;
+    font-weight: 400;
+    letter-spacing: 2.5px;
   }
 
   a:link {
@@ -57,7 +60,7 @@
 .logoContainer {
   display: flex;
   width: 20%;
-  margin-left: 100px;
+  margin-left: 200px;
 
   img {
     width: 50px;
@@ -68,7 +71,7 @@
     margin-left: 10px;
     font-family: "Nunito", sans-serif;
     font-weight: 400;
-    letter-spacing: 5px;
+    letter-spacing: 6px;
   }
 }
 
