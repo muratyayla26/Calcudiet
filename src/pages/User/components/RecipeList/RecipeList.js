@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./RecipeList.module.scss";
+import styles from "./RecipeList.module.css";
 import RecipeCard from "../RecipeCard/RecipeCard";
 
 const RecipeList = ({ recipes }) => {

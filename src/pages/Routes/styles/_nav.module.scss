@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@300;400&family=Open+Sans:wght@300;400;700&display=swap");
-@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Slabo+27px&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Raleway:wght@300;400;600&family=Slabo+27px&display=swap");
 
 .navContainer {
   display: flex;
@@ -31,13 +31,14 @@
   .listElement {
     list-style: none;
     font-size: 1.3rem;
-    font-family: 'Raleway', sans-serif;
+    font-family: "Raleway", sans-serif;
   }
   a {
     text-decoration: none;
     color: green;
     font-weight: 400;
     letter-spacing: 2.5px;
+    margin-left: 20px;
   }
 
   a:link {

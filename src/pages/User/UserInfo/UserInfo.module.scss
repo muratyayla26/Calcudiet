@@ -1,65 +1,41 @@
 .formContainer {
-	margin-top: 40px;
-	display: flex;
-	justify-content: center;
-	padding-bottom: 50px;
-	border:1px solid gray;
-	border-radius: 5px;
-	max-width: 400px;
-	margin:0 auto;
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 0 auto;
 
-	input{
-		padding: 5px;
-		margin-bottom: 30px;
-		font-family: "Open Sans", sans-serif;
-		font-size: 1rem;
-		width: 100%;
-		margin:0 auto;
-		margin-top:20px;
-	}
-	select{
-		margin-top: 20px;
-		padding: 5px;
-	}
+  input {
+    padding: 5px;
+    margin-bottom: 30px;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1rem;
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  select {
+    margin-top: 20px;
+    padding: 5px;
+  }
 
-	
-	p,h2{
-		text-align: center;
-	}
-	h2{
-		margin-top: 20px;
-	}
-	input[type=submit]{
-		background-color: rgb(13, 196, 13);
-		color:#fff;
-		cursor: pointer;
+  p,
+  h2 {
+    text-align: center;
+  }
+  h2 {
+    margin-top: 20px;
+  }
+  input[type="submit"] {
+    background-color: rgb(13, 196, 13);
+    color: #fff;
+    cursor: pointer;
 
-		&:hover{
-			background-color: red;
-		}
-
-	}
-
-
+    &:hover {
+      background-color: red;
+    }
+  }
 }
-
-// .formContainer input {
-// 	margin: 10px;
-// }
-
-// .formContainer form {
-// 	background: cornsilk;
-// 	border: 2px solid black;
-// 	padding: 25px 15px;
-// }
-
-// .formContainer .description {
-// 	margin-bottom: 100px;
-// }
-
-// .settingsUpdate {
-// 	font-size: 14px;
-// 	color: green;
-// 	text-align: center;
-// 	margin: 10px auto;
-// }

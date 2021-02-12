@@ -1,5 +1,5 @@
 import React, { useState, useContext, useEffect } from "react";
-import styles from "./UserInfo.module.css";
+import styles from "./UserInfo.module.scss";
 import { bmrData } from "../../../utility/BMR";
 import { AuthContext } from "../../../utility/AuthContext";
 import { userInfoUpdater } from "../../../utility/userInfoUpdater";
