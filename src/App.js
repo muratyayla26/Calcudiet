@@ -6,6 +6,7 @@ import Search from "./pages/Search";
 import Detail from "./pages/Detail";
 import User from "./pages/User";
 import LoginSignup from "./pages/LoginSignup";
+import UserSettings from "./pages/User/SubPages/UserSettings/UserSettings"
 import { AuthProvider } from "./utility/AuthContext";
 
 function App() {
@@ -26,8 +27,11 @@ function App() {
 						</Route>
 						{/* todo: below should be protected route
 					https://ui.dev/react-router-v5-protected-routes-authentication/ */}
-						<Route path="/user">
+						<Route exact path="/user">
 							<User />
+						</Route>
+						<Route path="/user/settings" >
+							<UserSettings/>
 						</Route>
 						{/* todo: login & signup should be seperate */}
 						<Route path="/LoginSignup">
