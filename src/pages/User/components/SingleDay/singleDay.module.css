@@ -1,0 +1,35 @@
+.singleday-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  min-width: 25%;
+  min-height: 100px;
+}
+.singleday-container-over {
+  background-color: green;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+  min-width: 25%;
+  min-height: 100px;
+}
+
+.recipeName {
+  display:inline-block;
+  max-width: 90%;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+
+.nameHolder {
+  display:block;
+}
+
+.removeRecipe{
+  margin-left:5px
+}
