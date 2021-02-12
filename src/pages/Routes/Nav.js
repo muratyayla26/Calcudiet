@@ -52,11 +52,16 @@ const Nav = () => {
         </li>
 
         {userId && (
+          <>
           <li className={styles.listElement}>
-            <NavLink activeClassName={styles["active"]} to="/user">
+            <NavLink activeClassName={styles["active"]} exact to="/user">
               User
-            </NavLink>
-          </li>
+            </NavLink></li>
+          <li className={styles.listElement}><NavLink activeClassName={styles["active"]} to="/user/settings">
+              Settings
+            </NavLink></li>
+          </>
+        
         )}
         {userId ? (
           <li onClick={logoutHandler} className={styles.listElement}>

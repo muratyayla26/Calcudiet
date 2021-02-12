@@ -1,28 +1,67 @@
 .formContainer {
-	margin-top: 40px;
-	text-align: center;
-	display: flex;
-	justify-content: center;
-	padding-bottom: 50px;
+  margin-top: 40px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  padding-bottom: 50px;
 }
 
 .formContainer input {
-	margin: 10px;
+  margin: 10px;
 }
 
 .formContainer form {
-	background: cornsilk;
-	border: 2px solid black;
-	padding: 25px 15px;
+  background: cornsilk;
+  border: 2px solid black;
+  padding: 25px 15px;
 }
 
 .formContainer .description {
-	margin-bottom: 100px;
+  margin-bottom: 100px;
 }
 
 .settingsUpdate {
-	font-size: 14px;
-	color: green;
-	text-align: center;
-	margin: 10px auto;
+  font-size: 14px;
+  color: green;
+  text-align: center;
+  margin: 10px auto;
+}
+
+.prevUserInfo {
+  text-align: center;
+  display: block;
+  border: 1px solid black;
+  border-radius: 5px;
+  background-color: rgba(86, 191, 209, 0.4);
+  width: 28%;
+  margin: 30px auto;
+  padding: 0;
+}
+
+.infoPart {
+  margin: 5px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-weight: 600;
+}
+
+.prevHeading h2 {
+  font-size: 25px !important;
+  color: red !important;
+  font-weight: 200;
+}
+.infoText {
+  margin-left: 10px;
+  font-size: 14px;
+  font-weight: 400;
+}
+.palText {
+  font-weight: 400;
+  margin-top: 7px;
+  font-size: 14px;
+}
+.palContainer {
+  font-weight: 600;
 }

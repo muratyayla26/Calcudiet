@@ -12,10 +12,12 @@
   justify-content: space-between;
 }
 
-.loader {
-  width: 40px;
-  height: 40px;
-  margin: 50px auto auto auto;
+.spinner-container {
+  width: fit-content;
+  margin: 50px auto;
 }
-
+.faSpinner {
+  font-size: 40px;
+  color: green;
+}
 @import "mobile.module";

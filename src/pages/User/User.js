@@ -2,15 +2,10 @@ import { AuthContext } from "../../utility/AuthContext";
 import { useContext, useEffect, useState } from "react";
 import { getDataFromStore } from "../../utility/getDataFromStore";
 import RecipeList from "./components/RecipeList/RecipeList";
-<<<<<<< HEAD
-////
-=======
-<<<<<<< HEAD
-////
-=======
-//
->>>>>>> ac836210db7680deddc58949dca2bfa0675f1f64
->>>>>>> 41f2d46963eab7657f786d15ca9cb44fa5adb2f5
+import { DndProvider } from 'react-dnd';
+import {HTML5Backend} from 'react-dnd-html5-backend';
+import styles from "./User.module.css"
+import Calendar from "./components/Calendar"
 const User = () => {
 	const { currentUser } = useContext(AuthContext);
 	const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
@@ -29,7 +24,15 @@ const User = () => {
 	return loading ? (
 		<div>Loading...</div>
 	) : (
-		<RecipeList recipes={data} currentUser={currentUser} />
+		<DndProvider backend={HTML5Backend}>
+			<div style={{display: "flex"}}>
+				<div className={styles.container}>
+					<RecipeList recipes={data} currentUser={currentUser} />
+				</div>
+				<Calendar />
+			</div>
+		</DndProvider>
+		
 	);
 };
 

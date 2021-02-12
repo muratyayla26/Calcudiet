@@ -15,7 +15,7 @@ const Nutrition = ({ calories, service, cautions, digest }) => {
 
   const submitHandler = (e) => {
     e.preventDefault();
-    if (e.target.service.value > 0 && e.target.service.value < 50) {
+    if (e.target.service.value > 0 && e.target.service.value < 51) {
       setNewService(e.target.service.value);
       inputError && setinputError(false);
     } else {
