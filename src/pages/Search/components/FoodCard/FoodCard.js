@@ -1,7 +1,6 @@
 import React, {useContext} from "react";
 import styles from "./FoodCard.module.scss";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUtensils } from "@fortawesome/free-solid-svg-icons";
 import { faHeart } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { AuthContext } from "../../../../utility/AuthContext"
@@ -32,23 +31,18 @@ function FoodCard({ recipe }) {
         <div className={styles.img}>
           <img alt="" src={recipe.image} />
         </div>
-        <div className={styles.p1}>
-          {" "}
+        <div className={styles.foodName}>
           <p>{recipe.label}</p>
         </div>
 
         <div className={styles.info}>
-          <p className={styles.p2}>
+          <p className={styles.calori}>
             {parseInt(recipe.calories)}
             <span> Calories</span>
           </p>
           <div className={styles.icon}>
             <FontAwesomeIcon onClick={addToList} className={styles["Heart"]} icon={faHeart} />
             <Link to={`/detail/${recipe.uri.split("_")[1]}`}>
-              <FontAwesomeIcon
-                className={styles["Utensils"]}
-                icon={faUtensils}
-              />
             </Link>
           </div>
         </div>
