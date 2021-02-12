@@ -1,5 +1,5 @@
 import React, { useState, useContext } from "react";
-import styles from "./UserInfo.module.css";
+import styles from "./UserInfo.module.scss";
 import { bmrData } from "../../../utility/BMR";
 import { AuthContext } from "../../../utility/AuthContext";
 import { userInfoUpdater } from "../../../utility/userInfoUpdater";
@@ -57,68 +57,66 @@ export const UserInfo = () => {
 					<h2>User Info</h2>
 					<p>You can set your info in this form.</p>
 				</div>
-				<label className="description" htmlFor="weight">
+				{/* <label className="description" htmlFor="weight">
 					Weight (kg)
-				</label>
+				</label> */}
 				<div>
 					<input
 						id="weight"
 						name="weight"
-						className="element text medium"
 						type="number"
 						onChange={handleChange}
+						placeholder="Weight"
 					/>
 				</div>
-				<label className="description" htmlFor="height">
+				{/* <label className="description" htmlFor="height">
 					Height (cm)
-				</label>
+				</label> */}
 				<div>
 					<input
 						id="height"
 						name="height"
-						className="element text medium"
 						type="number"
+						placeholder="height"
 						onChange={handleChange}
 					/>
 				</div>
-				<label className="description" htmlFor="age">
+				{/* <label className="description" htmlFor="age">
 					Age
-				</label>
+				</label> */}
 				<div>
 					<input
 						id="age"
 						name="age"
-						className="element text medium"
 						type="number"
+						placeholder="Age"
 						onChange={handleChange}
 					/>
 				</div>
-				<label className="description" htmlFor="gender">
+				{/* <label className="description" htmlFor="gender">
 					Gender
-				</label>
+				</label> */}
 				<div>
 					<select
-						className="element select medium"
 						id="gender"
 						name="gender"
 						onChange={handleChange}
 					>
-						<option defaultValue="select">Select</option>
+						<option defaultValue="select">Gender</option>
 						<option value="male">Male</option>
 						<option value="female">Female</option>
 					</select>
 				</div>
-				<label className="description" htmlFor="pal">
+				{/* <label className="description" htmlFor="pal">
 					Physical Activity Level
-				</label>
+				</label> */}
 				<div>
 					<select
-						className="element select large"
 						id="pal"
 						name="pal"
 						onChange={handleChange}
 					>
-						<option defaultValue="select">Select</option>
+						<option defaultValue="select">Physical Activity Level</option>
 						<option value="1">
 							Little / No Excercise (sedentary lifestyle)
 						</option>
@@ -133,7 +131,6 @@ export const UserInfo = () => {
 				</div>
 				<input type="hidden" name="form_id" value="14697" />
 				<input
-					className="button_text"
 					type="submit"
 					name="submit"
 					value="Submit"

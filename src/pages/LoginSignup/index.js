@@ -42,16 +42,24 @@ export const LoginSignup = () => {
   };
 
   return (
-    <div className={styles["container"]}>
-      <input onChange={emailChangeHandler} name="email" value={email} />
+    <div className={styles.container}>
+
+      <div className={styles.inputContainer}>
+      <input className={styles.emailinput} onChange={emailChangeHandler} name="email" value={email} placeholder="E-mail" />
       <input
-        type="password"
-        onChange={passwordChangeHandler}
-        name="password"
-        value={password}
+      className={styles.passwordinput}
+      type="password"
+      onChange={passwordChangeHandler}
+      name="password"
+      value={password}
+      placeholder="Password"
       />
-      <button onClick={loginHandler}>LOGIN</button>
-      <button onClick={signupHandler}>SIGN UP</button>
+      </div>
+      <div className={styles.btnContainer}>
+
+      <button  className={styles.loginbtn}  onClick={loginHandler}>LOGIN</button>
+      <button  className={styles.signbtn} onClick={signupHandler}>SIGN UP</button>
+      </div>
     </div>
   );
 };

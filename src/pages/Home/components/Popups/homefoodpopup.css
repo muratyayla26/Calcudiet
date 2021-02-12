@@ -50,6 +50,8 @@
 	padding:6px 24px;
 	text-decoration:none;
 	text-shadow:0px 1px 0px #7da63c;
+  margin-top: 2px;
+  margin-bottom: 10px;
 }
 .home-trigger-btn:hover {
 	background:linear-gradient(to bottom, #a5cc52 5%, #b8e356 100%);
