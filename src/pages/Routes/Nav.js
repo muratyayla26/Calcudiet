@@ -40,36 +40,60 @@ const Nav = () => {
       </NavLink>
 
       <ul className={styles.navList}>
-        <li className={styles.listElement}>
-          <NavLink activeClassName={styles["active"]} exact to="/">
+        <li>
+          <NavLink
+            className={styles.listElement}
+            activeClassName={styles["active"]}
+            exact
+            to="/"
+          >
             Home
           </NavLink>
         </li>
-        <li className={styles.listElement}>
-          <NavLink activeClassName={styles["active"]} to="/search">
+        <li>
+          <NavLink
+            className={styles.listElement}
+            activeClassName={styles["active"]}
+            to="/search"
+          >
             Search
           </NavLink>
         </li>
 
         {userId && (
           <>
-          <li className={styles.listElement}>
-            <NavLink activeClassName={styles["active"]} exact to="/user">
-              User
-            </NavLink></li>
-          <li className={styles.listElement}><NavLink activeClassName={styles["active"]} to="/user/settings">
-              Settings
-            </NavLink></li>
+            <li>
+              <NavLink
+                className={styles.listElement}
+                activeClassName={styles["active"]}
+                exact
+                to="/user"
+              >
+                User
+              </NavLink>
+            </li>
+            <li>
+              <NavLink
+                className={styles.listElement}
+                activeClassName={styles["active"]}
+                to="/user/settings"
+              >
+                Settings
+              </NavLink>
+            </li>
           </>
-        
         )}
         {userId ? (
           <li onClick={logoutHandler} className={styles.listElement}>
             <NavLink to="/">Logout</NavLink>
           </li>
         ) : (
-          <li className={styles.listElement}>
-            <NavLink activeClassName={styles["active"]} to="/LoginSignup">
+          <li>
+            <NavLink
+              className={styles.listElement}
+              activeClassName={styles["active"]}
+              to="/LoginSignup"
+            >
               Login
             </NavLink>
           </li>

@@ -7,7 +7,6 @@ import { addToStore } from "../../../../utility/addToStore";
 import { AuthContext } from "../../../../utility/AuthContext";
 
 function FoodCard({ data }) {
-
   const { currentUser } = useContext(AuthContext);
   const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
   const [url, setUrl] = useState(null);
@@ -84,19 +83,6 @@ function FoodCard({ data }) {
                   <Link to={`/detail/${url}`}>
                     <button>See More</button>
                   </Link>
-
-                  <Popup
-                    trigger={
-                      <button className="button"> Add to Favorites </button>
-                    }
-                    position="top center"
-                    nested
-                  >
-                    {/* Add favorites function will be added here */}
-                    <span>
-                      Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-                    </span>
-                  </Popup>
                   <button onClick={addToList}>Add to list</button>
                 </div>
               </div>

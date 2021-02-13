@@ -75,7 +75,9 @@
     letter-spacing: 6px;
   }
 }
-
+.active {
+  border-bottom: 1px solid #008000 !important;
+}
 @media screen and (max-width: 992px) {
   .navList {
     height: 50px;
