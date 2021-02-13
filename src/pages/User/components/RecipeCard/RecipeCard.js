@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./RecipeCard.module.css";
 import { useDrag } from "react-dnd";
 import { truncateText } from "../../../../utility/truncateText";
-
+import { Link } from "react-router-dom";
 const ItemTypes = {
   CARD: "card",
 };
@@ -25,20 +25,17 @@ const RecipeCard = ({ recipe }) => {
         isDragging ? styles["propertyCard-dragging"] : styles["propertyCard"]
       }
     >
-      <div className={styles.propertyImage}>
-        <img className={styles.cardImage} src={recipe.image} alt=""></img>
-      </div>
-
+      <Link to={`/detail/${recipe.id}`}>
+        <div className={styles.propertyImage}>
+          <img className={styles.cardImage} src={recipe.image} alt=""></img>
+        </div>
+      </Link>
       <div className={styles.propertyDescription}>
         <p> {truncateText(recipe.name, 22)}</p>
         <div className={styles.buttonHolder}>
           <p>
             <strong>{parseInt(recipe.calory / recipe.service)} kcal</strong>
           </p>
-
-          <button>
-            <p> X</p>
-          </button>
         </div>
       </div>
     </div>

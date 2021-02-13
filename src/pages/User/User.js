@@ -6,6 +6,8 @@ import { DndProvider } from 'react-dnd';
 import {HTML5Backend} from 'react-dnd-html5-backend';
 import styles from "./User.module.css"
 import Calendar from "./components/Calendar"
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 const User = () => {
 	const { currentUser } = useContext(AuthContext);
 	const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
@@ -22,7 +24,13 @@ const User = () => {
 	}, []);
 
 	return loading ? (
-		<div>Loading...</div>
+		<div className={styles["spinner-container"]}>
+          <FontAwesomeIcon
+            className={styles["faSpinner"]}
+            icon={faCircleNotch}
+            spin
+          />
+        </div>
 	) : (
 		<DndProvider backend={HTML5Backend}>
 			<div style={{display: "flex"}}>

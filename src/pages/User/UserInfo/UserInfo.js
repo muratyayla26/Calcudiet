@@ -98,6 +98,10 @@ export const UserInfo = () => {
               </p>
             </div>
           </div>
+          <div className={styles.infoPart}>
+            <p>Daily calory limit:</p>
+            <p className={styles.infoText}>{dbData.calories}</p>
+          </div>
         </div>
       ) : (
         ""
@@ -120,7 +124,7 @@ export const UserInfo = () => {
               id="weight"
               name="weight"
               type="number"
-              placeholder="Weight (cm)"
+              placeholder="Weight (kg)"
               onChange={handleChange}
             />
           </div>

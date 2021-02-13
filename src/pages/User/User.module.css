@@ -1,3 +1,11 @@
-.container{
-display:block;
+.container {
+  display: block;
+}
+.spinner-container {
+  width: fit-content;
+  margin: 50px auto;
+}
+.faSpinner {
+  font-size: 40px;
+  color: green;
 }
