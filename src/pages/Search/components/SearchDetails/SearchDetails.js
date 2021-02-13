@@ -4,7 +4,7 @@ import FoodCard from "../FoodCard/FoodCard.js";
 import InfiniteScroll from "react-infinite-scroll-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
-
+import { faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons";
 function SearchDetails({ recipe, setRange, searchKey }) {
   const handleInfinite = () => {
     setRange((prev) => {
@@ -20,7 +20,15 @@ function SearchDetails({ recipe, setRange, searchKey }) {
         hasMore={recipe.length >= 96 ? false : true}
         scrollThreshold={0.9}
         endMessage={
-          <p className={styles["end-message"]}>You have seen it all :)</p>
+          <div className={styles["end-message-container"]}>
+            <p className={styles["end-message"]}>You have seen it all </p>
+            <a href="#">
+              <FontAwesomeIcon
+                className={styles["end-message-icon"]}
+                icon={faArrowAltCircleUp}
+              />
+            </a>
+          </div>
         }
         loader={
           searchKey && (
