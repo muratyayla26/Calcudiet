@@ -59,41 +59,43 @@ export const UserInfo = () => {
   return (
     <>
       {dbData ? (
-        <div className={styles.prevUserInfo}>
-          <div className={styles.prevHeading}>
+        <div className={styles.infoContainer}>
+          <div className={styles.form}>
             <h2>Your Info:</h2>
           </div>
           <div className={styles.infoPart}>
-            Weight(kg):
-            <span className={styles.infoText}>{dbData.weight}</span>
+            <p>Weight(kg):</p>
+            <p className={styles.infoText}>{dbData.weight}</p>
           </div>
           <div className={styles.infoPart}>
-            Height(cm):
-            <span className={styles.infoText}>{dbData.height}</span>
+            <p>Height(cm):</p>
+            <p className={styles.infoText}>{dbData.height}</p>
           </div>
           <div className={styles.infoPart}>
-            Age:
-            <span className={styles.infoText}>{dbData.age}</span>
+            <p>Age:</p>
+            <p className={styles.infoText}>{dbData.age}</p>
           </div>
           <div className={styles.infoPart}>
-            Gender:
-            <span className={styles.infoText}>{dbData.gender}</span>
+            <p>Gender:</p>
+            <p className={styles.infoText}>{dbData.gender}</p>
           </div>
           <div className={styles.palContainer}>
-            Physical Activity Level:
+            <p>Physical Activity Level:</p>
             <div className={styles.palText}>
-              {console.log("paldatadb:", dbData.pal)}
-              {dbData.pal === "1"
-                ? "Little / No Excercise (sedentary lifestyle)"
-                : dbData.pal === "2"
-                ? "Light Exercise (1 - 2 times a week)"
-                : dbData.pal === "3"
-                ? "Little / No Excercise (sedentary lifestyle)"
-                : dbData.pal === "4"
-                ? "Moderate Exercise (2 - 3 times a week)"
-                : dbData.pal === "5"
-                ? "Hard Exercise (4 - 5 times a week)"
-                : "Physical Job or Hard Exercise (6 - 7 times a week)"}
+              <p>
+                {console.log("paldatadb:", dbData.pal)}
+                {dbData.pal === "1"
+                  ? "Little / No Excercise (sedentary lifestyle)"
+                  : dbData.pal === "2"
+                  ? "Light Exercise (1 - 2 times a week)"
+                  : dbData.pal === "3"
+                  ? "Little / No Excercise (sedentary lifestyle)"
+                  : dbData.pal === "4"
+                  ? "Moderate Exercise (2 - 3 times a week)"
+                  : dbData.pal === "5"
+                  ? "Hard Exercise (4 - 5 times a week)"
+                  : "Physical Job or Hard Exercise (6 - 7 times a week)"}
+              </p>
             </div>
           </div>
         </div>
@@ -110,71 +112,47 @@ export const UserInfo = () => {
             ) : (
               ""
             )}
-            <h2>User Info</h2>
+            <h2>Set User Info</h2>
             <p>You can set your info in this form.</p>
           </div>
-          <label className="description" htmlFor="weight">
-            Weight (kg)
-          </label>
           <div>
             <input
               id="weight"
               name="weight"
-              className="element text medium"
               type="number"
+              placeholder="Weight (cm)"
               onChange={handleChange}
             />
           </div>
-          <label className="description" htmlFor="height">
-            Height (cm)
-          </label>
           <div>
             <input
               id="height"
               name="height"
-              className="element text medium"
               type="number"
+              placeholder="Height (cm)"
               onChange={handleChange}
             />
           </div>
-          <label className="description" htmlFor="age">
-            Age
-          </label>
           <div>
             <input
               id="age"
               name="age"
-              className="element text medium"
               type="number"
+              placeholder="Age"
               onChange={handleChange}
             />
           </div>
-          <label className="description" htmlFor="gender">
-            Gender
-          </label>
           <div>
-            <select
-              className="element select medium"
-              id="gender"
-              name="gender"
-              onChange={handleChange}
-            >
-              <option defaultValue="select">Select</option>
+            <select id="gender" name="gender" onChange={handleChange}>
+              <option defaultValue="select">Gender</option>
               <option value="male">Male</option>
               <option value="female">Female</option>
             </select>
           </div>
-          <label className="description" htmlFor="pal">
-            Physical Activity Level
-          </label>
+
           <div>
-            <select
-              className="element select large"
-              id="pal"
-              name="pal"
-              onChange={handleChange}
-            >
-              <option defaultValue="select">Select</option>
+            <select id="pal" name="pal" onChange={handleChange}>
+              <option defaultValue="select">Physical Activity Level</option>
               <option value="1">
                 Little / No Excercise (sedentary lifestyle)
               </option>
@@ -189,7 +167,6 @@ export const UserInfo = () => {
           </div>
           <input type="hidden" name="form_id" value="14697" />
           <input
-            className="button_text"
             type="submit"
             name="submit"
             value="Submit"

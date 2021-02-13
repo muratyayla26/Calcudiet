@@ -14,7 +14,7 @@ function FetchData() {
     if (food !== "")
       axios
         .get(
-          `https://api.edamam.com/search?q=${food}&app_id=${appid}&app_key=${key}&from=0&to=4&calories=591-722&health=alcohol-free`
+          `https://api.edamam.com/search?q=${food}&app_id=${appid}&app_key=${key}&from=0&to=4&calories=591-722&health=alcohol-free`,
         )
         .then((res) => setData(res.data.hits));
   };
@@ -28,13 +28,11 @@ function FetchData() {
       ) : (
         <div className={styles.mainParagraphContainer}>
           <p className={styles.mainParagraph}>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia deserunt mollit anim id est laborum.
+            What we eat and how we eat it is both a pleasure and an art. We have
+            access to a wider variety and quality of food and drinks that our
+            grandparents could only have dreamt of. However, with our hectic
+            modern lives, people may experience a lack of balance in how much
+            they consume, affecting the quality of their health and lifestyles.
           </p>
         </div>
       )}

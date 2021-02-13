@@ -9,10 +9,10 @@ function MiddleContent() {
         <Fade duration={3000}>
           <h4 className={styles.middleheader}>Stay healthy stay fit</h4>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat.{" "}
+            Healthy diet is rich in fiber, whole grains, fresh fruits and
+            vegetables, "good" or unsaturated fats, and omega-3 fatty acids.
+            These dietary components turn down inflammation, which can damage
+            tissue, joints, artery walls, and organs.{" "}
           </p>
         </Fade>
       </div>

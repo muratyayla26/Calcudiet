@@ -17,7 +17,7 @@ const RecipeList = ({ recipes }) => {
   }, [search]);
 
   return (
-    <>
+    <div className={styles.recipeWrapper}>
       <div className={styles.titleHolder}>
         <h2 className={styles.recipeTitle}>Recipe List</h2>
       </div>
@@ -37,7 +37,7 @@ const RecipeList = ({ recipes }) => {
         ))}
       </div>
       {/* <UserInfo /> */}
-    </>
+    </div>
   );
 };
 

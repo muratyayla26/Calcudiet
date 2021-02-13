@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import styles from "./singleDay.module.css";
 import { useDrop } from "react-dnd";
 import ProgressBar from "@ramonak/react-progress-bar";
+import { truncateText } from "../../../../utility/truncateText";
 
 const ItemTypes = {
   CARD: "card",
@@ -76,7 +77,9 @@ const SingleDay = ({ data, setData, userCalory }) => {
       {data.recipes.map((recipe, i) => {
         return (
           <div key={i} className={styles.nameHolder}>
-            <div className={styles.recipeName}>{recipe.name}</div>
+            <div className={styles.recipeName}>
+              {truncateText(recipe.name, 23)}
+            </div>
             <span
               onClick={() => handlerRemove(recipe.name)}
               className={styles.removeRecipe}
@@ -86,20 +89,29 @@ const SingleDay = ({ data, setData, userCalory }) => {
           </div>
         );
       })}
-      {<div>{userCalory}</div>}
-      <div>{data.calory}</div>
-      <ProgressBar
-        completed={barPercent}
-        bgcolor={barPercent > 100 ? "#ff0000 " : "#30e839"}
-        height="15px"
-        borderRadius="20px"
-        labelAlignment="left"
-        baseBgColor="#ecec3d"
-        labelColor="#030303"
-        labelSize="8"
-        margin="5px"
-        padding="0"
-      />
+      <div className={styles.bottomInfo}>
+        {data.calory > userCalory ? (
+          <div style={{ color: "red", fontWeight: "500" }}>
+            Daily calories exceeded!
+          </div>
+        ) : (
+          <div>Total: {data.calory} kcal - per day</div>
+        )}
+        <div className={styles.progress}>
+          <ProgressBar
+            completed={barPercent}
+            bgcolor={barPercent >= 100 ? "#ff0000" : "#30e839"}
+            height="15px"
+            borderRadius="20px"
+            labelAlignment="left"
+            baseBgColor="#ecec3d"
+            labelColor="#030303"
+            labelSize="8"
+            margin="5px"
+            padding="0"
+          />
+        </div>
+      </div>
     </div>
   );
 };

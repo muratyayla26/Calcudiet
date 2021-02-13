@@ -8,6 +8,26 @@
   max-width: 400px;
   margin: 0 auto;
 
+  .infoPart {
+    text-align: center;
+    p {
+      margin-top: 5px !important;
+      text-align: center;
+      font-weight: 500;
+    }
+    .infoText p {
+      margin: 2px auto;
+    }
+  }
+
+  p,
+  h2 {
+    text-align: center;
+  }
+  h2 {
+    margin-top: 20px;
+  }
+
   input {
     padding: 5px;
     margin-bottom: 30px;
@@ -39,3 +59,49 @@
     }
   }
 }
+
+.infoContainer {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-bottom: 50px;
+  border: 1px solid gray;
+  border-radius: 5px;
+  max-width: 400px;
+  margin: 20px auto;
+
+  .infoPart {
+    p {
+      font-family: "Open Sans", sans-serif;
+      font-size: 1rem;
+      width: 100%;
+      margin-top: 5px;
+      text-align: center;
+      font-weight: 400;
+    }
+  }
+
+  p,
+  h2 {
+    text-align: center;
+  }
+  h2 {
+    margin-top: 20px;
+  }
+}
+
+.palContainer p {
+  font-family: "Open Sans", sans-serif;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 5px;
+  text-align: center;
+  font-weight: 400;
+}
+
+// BMRSettingsUpdated{
+//   color: green;
+//   font-weight: 100;
+//   font-size: 20px;
+// }
