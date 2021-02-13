@@ -18,7 +18,7 @@ function SearchDetails({ recipe, setRange, searchKey }) {
         dataLength={recipe.length}
         next={() => handleInfinite()}
         hasMore={recipe.length >= 96 ? false : true}
-        scrollThreshold={1}
+        scrollThreshold={0.9}
         endMessage={
           <p className={styles["end-message"]}>You have seen it all :)</p>
         }

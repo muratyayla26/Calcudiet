@@ -1,0 +1,50 @@
+.footerContainer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 150px;
+  .blank {
+    height: 200px;
+  }
+}
+
+.footer {
+  p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin-top: 10px;
+  }
+
+  .socialMedia {
+    width: 100%;
+    display: flex;
+    margin: 0 auto;
+    justify-content: center;
+    margin: 50px 0;
+  }
+  .icon {
+    margin-left: 10px;
+    margin-right: 10px;
+    cursor: pointer;
+    font-size: 2.2rem;
+  }
+  .icon:hover {
+    color: rgb(56, 165, 42);
+  }
+}
+
+.address {
+  max-width: 1300px;
+  margin: 0 auto;
+  text-align: center;
+
+  .contactContent {
+    margin: 0 auto;
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    font-family: "Open Sans", sans-serif;
+    font-size: 1.3rem;
+    color: #000000;
+  }
+}

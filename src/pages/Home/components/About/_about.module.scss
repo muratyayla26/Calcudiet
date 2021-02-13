@@ -8,25 +8,26 @@
   max-width: 1300px;
   margin: auto;
   margin-top: 70px;
-
   h2 {
     text-align: center;
     font-family: "Open Sans", sans-serif;
     letter-spacing: 4px;
     color: green;
-    margin-bottom: 15px;
-    font-size:2rem;
+    margin-bottom: 25px;
+    font-size: 2rem;
   }
   p {
+    display: inline-block;
     font-family: "Open Sans", sans-serif;
     font-size: 1.4rem;
     text-indent: 20px;
-    width:90%;
-    margin:0 auto;
+    text-align: justify;
+    width: 90%;
+    margin: 0 50px 50px 50px;
   }
 
   img {
-    width: 90%;
+    width: 80%;
     margin-left: auto;
     margin-right: auto;
     display: block;
@@ -35,6 +36,7 @@
 
 @media only screen and (max-width: 500px) {
   .aboutContainer p {
+    display: flex;
     font-size: 1.1rem;
     width: 95%;
     margin: 0 auto;

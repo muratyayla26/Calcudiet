@@ -42,3 +42,8 @@ const RecipeList = ({ recipes }) => {
 };
 
 export default RecipeList;
+/*
+handleClick = () => {
+  deletefromstore(yemekids, kullanicişd);
+  recipes.filter(yemeğin idsine göre);
+}*/

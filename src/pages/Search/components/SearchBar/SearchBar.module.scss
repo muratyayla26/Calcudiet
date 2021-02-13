@@ -16,7 +16,7 @@
   border-radius: 15px;
   height: 40px;
   padding: 10px;
-  &:hover{
-    border: none;
+  &:focus {
+    outline: none;
   }
 }

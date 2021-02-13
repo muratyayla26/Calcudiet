@@ -2,8 +2,9 @@ import { db } from "./firestore";
 // parametre olarak userData getir.
 export const userInfoUpdater = async (updateData, currentUser) => {
   let isExist = false;
-  const { weight, height, age, gender, pal } = updateData;
-  console.log("dataUpdater: ", weight, height, age, gender, pal);
+
+  const { weight, height, age, gender, pal, calories } = updateData;
+  console.log("dataUpdater: ", weight, height, age, gender, pal, calories);
   const ownerId = currentUser;
   try {
     await db
@@ -24,6 +25,7 @@ export const userInfoUpdater = async (updateData, currentUser) => {
       age,
       gender,
       pal,
+      calories,
       ownerId,
     });
   }
@@ -43,6 +45,7 @@ export const userInfoUpdater = async (updateData, currentUser) => {
             age: age,
             gender: gender,
             pal: pal,
+            calories: calories,
             ownerId: ownerId,
           });
         });

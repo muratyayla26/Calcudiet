@@ -37,8 +37,8 @@ export const UserInfo = () => {
     }
     const { weight, height, age, gender, pal } = userData;
     setIsChanged(true);
-    setBioData(bmrData(weight, height, age, gender, pal));
-    const updateData = { weight, height, age, gender, pal };
+    const { calories } = bmrData(weight, height, age, gender, pal);
+    const updateData = { weight, height, age, gender, pal, calories };
     userInfoUpdater(updateData, userId);
   };
 
@@ -55,7 +55,7 @@ export const UserInfo = () => {
       pal !== "Select"
     );
   };
-  console.log("DATTTAAAA:", dbData);
+
   return (
     <>
       {dbData ? (

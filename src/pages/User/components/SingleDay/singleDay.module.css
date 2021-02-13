@@ -19,7 +19,7 @@
 }
 
 .recipeName {
-  display:inline-block;
+  display: inline-block;
   max-width: 90%;
   overflow: hidden;
   white-space: nowrap;
@@ -27,9 +27,9 @@
 }
 
 .nameHolder {
-  display:block;
+  display: block;
 }
 
-.removeRecipe{
-  margin-left:5px
+.removeRecipe {
+  margin-left: 5px;
 }

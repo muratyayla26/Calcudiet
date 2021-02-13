@@ -15,21 +15,25 @@
   width: 150px;
   margin-left: 20px;
   margin-top: 10px;
-  border: 2px solid gray;
-  border-radius: 5px;
+  padding: 5px;
+  border: 0.5px;
+  border-radius: 11px;
+  outline: 0;
+  background: transparent;
+  background-color: #e6e6e6;
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
   text-align: center;
   font-family: Arial, Helvetica, sans-serif;
 
-  p{
-    padding-top:5px ;
+  p {
+    padding-top: 5px;
   }
 }
 
-.foodCard:hover{
-  border:2px solid pink;
+.foodCard:hover {
+  box-shadow: 0 9px 11px rgba(0, 0, 0, 0.15);
 }
 
 .cardImg {
@@ -73,17 +77,12 @@ li {
     both;
 }
 
-
-
-.alreadyAddedList{
+.alreadyAddedList {
   text-align: left;
-  color:green;
-  font-size:1rem !important;
+  color: green;
+  font-size: 1rem !important;
   padding-bottom: 5px;
 }
-
-
-
 
 @-webkit-keyframes swing-in-top-fwd {
   0% {

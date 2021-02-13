@@ -1,11 +1,13 @@
 import React, { useState, useEffect } from "react";
 import styles from "./singleDay.module.css";
 import { useDrop } from "react-dnd";
+import ProgressBar from "@ramonak/react-progress-bar";
+
 const ItemTypes = {
   CARD: "card",
 };
 
-const SingleDay = ({ data, setData }) => {
+const SingleDay = ({ data, setData, userCalory }) => {
   // eslint-disable-next-line no-unused-vars
   const [totalCal, setTotalCal] = useState(0);
   const [recCache, setRecCache] = useState({});
@@ -60,6 +62,7 @@ const SingleDay = ({ data, setData }) => {
     });
   };
 
+  const barPercent = parseInt((data.calory / userCalory) * 100);
   return (
     <div
       ref={drop}
@@ -83,7 +86,20 @@ const SingleDay = ({ data, setData }) => {
           </div>
         );
       })}
+      {<div>{userCalory}</div>}
       <div>{data.calory}</div>
+      <ProgressBar
+        completed={barPercent}
+        bgcolor={barPercent > 100 ? "#ff0000 " : "#30e839"}
+        height="15px"
+        borderRadius="20px"
+        labelAlignment="left"
+        baseBgColor="#ecec3d"
+        labelColor="#030303"
+        labelSize="8"
+        margin="5px"
+        padding="0"
+      />
     </div>
   );
 };
