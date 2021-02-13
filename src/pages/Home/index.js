@@ -22,7 +22,7 @@ const Home = () => {
       <SecondMiddleContent />
       <FetchOffers />
       <Contact />
-      {/* <Footer/> */}
+      <Footer />
     </div>
   );
 };

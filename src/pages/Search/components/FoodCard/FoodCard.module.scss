@@ -52,6 +52,7 @@ img {
   .icon {
     text-decoration: none;
     .Heart {
+      cursor: pointer;
       color: green;
       font-size: 21px;
       &:hover{

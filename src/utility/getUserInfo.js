@@ -16,6 +16,6 @@ export const getUserInfo = async (currentUser) => {
     isExist = true;
     return output;
   } catch (error) {
-    output = null;
+    return (output = { calories: 1 });
   }
 };
