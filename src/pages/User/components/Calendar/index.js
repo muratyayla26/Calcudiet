@@ -1,8 +1,9 @@
 import React, { useState, useContext, useEffect } from "react";
-import styles from "./calendar.module.css";
+import styles from "./calendar.module.scss";
 import SingleDay from "../SingleDay";
 import { getUserInfo } from "../../../../utility/getUserInfo";
 import { AuthContext } from "../../../../utility/AuthContext";
+
 const Calendar = () => {
   const { currentUser } = useContext(AuthContext);
   const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
@@ -17,6 +18,7 @@ const Calendar = () => {
   ]);
   const [userCalory, setUserCalory] = useState(null);
   const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
     getUserInfo(userId).then((res) => {
       setUserCalory(res.calories);

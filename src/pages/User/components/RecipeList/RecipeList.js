@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import styles from "./RecipeList.module.css";
+import styles from "./RecipeList.module.scss";
 import RecipeCard from "../RecipeCard/RecipeCard";
 
 const RecipeList = ({ recipes }) => {
@@ -9,11 +9,8 @@ const RecipeList = ({ recipes }) => {
   useEffect(() => {
     const searchText = search.toLowerCase();
     setResult(
-      recipes.filter((recipe) =>
-        recipe.name.toLowerCase().includes(searchText),
-      ),
+      recipes.filter((recipe) => recipe.name.toLowerCase().includes(searchText))
     );
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
   return (
@@ -36,14 +33,8 @@ const RecipeList = ({ recipes }) => {
           <RecipeCard recipe={recipe} key={recipe.id} />
         ))}
       </div>
-      {/* <UserInfo /> */}
     </div>
   );
 };
 
 export default RecipeList;
-/*
-handleClick = () => {
-  deletefromstore(yemekids, kullanicişd);
-  recipes.filter(yemeğin idsine göre);
-}*/

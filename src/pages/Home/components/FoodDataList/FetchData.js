@@ -8,13 +8,13 @@ function FetchData() {
   const [data, setData] = useState();
 
   const fetch = (food, e) => {
-    const key = process.env.REACT_APP_KEY;
-    const appid = process.env.REACT_APP_APPID;
+    const key = process.env.REACT_APP_EDAMAM_KEY;
+    const appid = process.env.REACT_APP_EDAMAM_ID;
     e.preventDefault();
     if (food !== "")
       axios
         .get(
-          `https://api.edamam.com/search?q=${food}&app_id=${appid}&app_key=${key}&from=0&to=4&calories=591-722&health=alcohol-free`,
+          `https://api.edamam.com/search?q=${food}&app_id=${appid}&app_key=${key}&from=0&to=4&calories=591-722&health=alcohol-free`
         )
         .then((res) => setData(res.data.hits));
   };

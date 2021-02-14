@@ -16,12 +16,11 @@ export const search = async (inputId) => {
       url: data[0].url,
       cautions: data[0].cautions,
       ingredientLines: data[0].ingredientLines,
-      yield: data[0].yield || 1, //number
-      calories: data[0].calories, //number
-      digest: data[0].digest, //total: number geliyor
+      yield: data[0].yield || 1,
+      calories: data[0].calories,
+      digest: data[0].digest,
       uri: data[0].uri,
     };
-
     return recipe;
   } catch (e) {
     console.log(e);

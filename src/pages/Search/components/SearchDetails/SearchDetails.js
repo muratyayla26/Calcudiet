@@ -5,6 +5,7 @@ import InfiniteScroll from "react-infinite-scroll-component";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCircleNotch } from "@fortawesome/free-solid-svg-icons";
 import { faArrowAltCircleUp } from "@fortawesome/free-solid-svg-icons";
+
 function SearchDetails({ recipe, setRange, searchKey }) {
   const handleInfinite = () => {
     setRange((prev) => {

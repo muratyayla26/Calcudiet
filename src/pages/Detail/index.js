@@ -3,7 +3,6 @@ import { useState, useEffect, useContext } from "react";
 import { useRouteMatch } from "react-router-dom";
 import styles from "./styles/index.module.scss";
 import General from "./components/General/General";
-//import { infos } from "./utility/temporary";
 import Ingredients from "./components/Ingredients/Ingredients";
 import Nutrition from "./components/Nutrition/Nutrition";
 import { AuthContext } from "../../utility/AuthContext";

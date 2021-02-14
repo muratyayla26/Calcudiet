@@ -11,9 +11,9 @@
   border-radius: 9px;
   background-color: #e6e6e6;
   font-size: 100%;
-  &:hover{
-    box-shadow: 0 5px 7px rgba(0,0,0,0.15);
-    p{
+  &:hover {
+    box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
+    p {
       color: rgb(45, 122, 45);
     }
   }
@@ -33,7 +33,7 @@ img {
   display: inline-block;
   text-align: center;
 }
-.foodName p{
+.foodName p {
   font-size: 16px;
   text-align: left;
   margin: 10px;
@@ -41,7 +41,7 @@ img {
 }
 .info {
   display: flex;
-  justify-content:space-around;
+  justify-content: space-around;
   padding: 10px 0px 8px;
   margin: 0px 10px;
   text-align: center;
@@ -55,10 +55,9 @@ img {
       cursor: pointer;
       color: green;
       font-size: 21px;
-      &:hover{
+      &:hover {
         color: rgb(106, 192, 106);
       }
-    }  
+    }
   }
 }
-

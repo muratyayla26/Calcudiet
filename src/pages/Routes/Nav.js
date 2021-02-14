@@ -4,7 +4,7 @@ import { authentication } from "../../utility/firestore";
 import { useHistory } from "react-router";
 import { Link, NavLink } from "react-router-dom"; //Nav stillendirilecek
 import styles from "./styles/_nav.module.scss";
-import "./styles/nav-ham-menu.css";
+import "./styles/nav-ham-menu.scss";
 import logo from "./img/logo.png";
 
 const Nav = () => {
@@ -16,7 +16,7 @@ const Nav = () => {
     authentication.signOut();
     localStorage.setItem("userId", "");
     history.push("/");
-    console.log("cikis basarili");
+    //console.log("logout successful");
   };
 
   function toggleHamburger() {

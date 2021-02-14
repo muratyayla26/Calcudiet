@@ -14,12 +14,6 @@
   box-shadow: 0 5px 7px rgba(0, 0, 0, 0.15);
   position: relative;
 }
-/* .singleday-container .bottomInfo {
-  display: flex;
-  justify-content: flex-end;
-  flex-direction: column;
-  align-items: flex-end;
-} */
 
 .singleday-container-over {
   padding: 3px;
@@ -75,6 +69,7 @@
   font-weight: bold;
   margin-left: 5px;
 }
+
 .removeRecipe:hover {
   cursor: pointer;
 }

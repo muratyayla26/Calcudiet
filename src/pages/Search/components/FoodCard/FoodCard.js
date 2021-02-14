@@ -9,17 +9,18 @@ import { addToStore } from "../../../../utility/addToStore";
 function FoodCard({ recipe }) {
   const { currentUser } = useContext(AuthContext);
   const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
+
   const addToList = () => {
     if (userId) {
       addToStore(recipe, userId).then((response) => {
         if (response) {
-          console.log("veri store eklendi");
+          //console.log("data added successfully");
         } else {
-          console.log("veri eklenmedi");
+          //console.log("data couldn't added");
         }
       });
     } else {
-      console.log("giriş yapılmadığı için veri eklenmedi");
+      //console.log("user cannot found");
     }
   };
 
@@ -34,7 +35,6 @@ function FoodCard({ recipe }) {
         <div className={styles.foodName}>
           <p>{recipe.label}</p>
         </div>
-
         <div className={styles.info}>
           <p className={styles.calori}>
             {parseInt(recipe.calories)}

@@ -9,7 +9,7 @@ function OfferTable({ offer }) {
     const longUrl = offer.recipe.uri;
     const url = longUrl.split("_")[1];
     setUrl(url);
-  },[offer.recipe.uri]);
+  }, [offer.recipe.uri]);
 
   return (
     <>
@@ -19,13 +19,9 @@ function OfferTable({ offer }) {
             {" "}
             <Link to={`/detail/${url}`}>{offer.recipe.label}</Link>
           </td>
-
           <td>{parseInt(offer.recipe.calories)}</td>
-
           <td>{parseInt(offer.recipe.totalNutrients.FAT.quantity)}</td>
-
           <td>{parseInt(offer.recipe.totalNutrients.SUGAR.quantity)}</td>
-
           <td>{parseInt(offer.recipe.totalNutrients.PROCNT.quantity)}</td>
         </tr>
       </Slide>

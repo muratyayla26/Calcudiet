@@ -1,4 +1,4 @@
-//firestore ve firebase authenticaion configuration yapisi
+//authentication and firestore configuration
 import firebase from "firebase/app";
 import "firebase/firestore";
 import "firebase/auth";

@@ -23,20 +23,20 @@ const General = ({ recipe, alreadyAdded, setAlreadyAdded }) => {
         setAlreadyAdded(!alreadyAdded);
         let recipeId = recipe.uri.split("_")[1];
         deleteFromStore(recipeId, userId).then((res) => {
-          console.log("veri basariyla silindi");
+          //console.log("data deleted successfully");
         });
       } else {
         addToStore(recipe, userId).then((res) => {
           if (res) {
             setAlreadyAdded(!alreadyAdded);
-            console.log("veri stora eklendi");
+            //console.log("data added to store successfully");
           } else {
-            console.log("baglanti hatasi");
+            //console.log("firestore or connection error");
           }
         });
       }
     } else {
-      console.log("user olmadigi icin stora eklenmemedi");
+      //console.log("user cannot found");
     }
   };
 

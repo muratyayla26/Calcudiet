@@ -1,7 +1,7 @@
-//firestore veri eklemek icin kullanacagimiz fonksiyon
-//Fonksiyon eger true donduruyorsa veri basarili bir sekilde firestore eklendi.
-//fonksiyon false donduruyorsa veri firestora eklenemedi. Daha once aynı veri,
-//aynı kullanici icin eklenmis anlamina geliyor.
+//this function is used to add data to the firestore
+//if function returns true, it means that data is added successfully
+//if function returns false it means that data couldn't added
+//function parameters are recipe object and userId
 import { db } from "./firestore";
 
 export const addToStore = async (recipe, ownerId) => {
@@ -18,7 +18,7 @@ export const addToStore = async (recipe, ownerId) => {
       });
     checker = false;
   } catch (error) {
-    console.log("olmayan veri sorgusu hatasi");
+    //console.log("data couldn't found");
   }
 
   if (checker) {

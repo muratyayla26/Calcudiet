@@ -1,7 +1,7 @@
-//veriyi firestoredan silmek icin kullanilan fonksiyon
-//ilk parametre yemegin id si, ikinci parametre userid si
-//fonksiyon true donerse veri basari ile silindi
-//fonksiyon false donerse firestore ile ilgili baglanti hatasi anlamina geliyor
+//this function is used to delete data from firestore
+//if function returns true, it means that data is deleted from the firestore successfully
+//if function returns false, it means that an error about firestore or connection
+//function parameters are recipeId and userId
 import { db } from "./firestore";
 
 export const deleteFromStore = async (recipeId, ownerId) => {

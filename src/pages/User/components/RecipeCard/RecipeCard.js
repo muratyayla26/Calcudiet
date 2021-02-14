@@ -1,16 +1,13 @@
 import React from "react";
-import styles from "./RecipeCard.module.css";
+import styles from "./RecipeCard.module.scss";
 import { useDrag } from "react-dnd";
 import { truncateText } from "../../../../utility/truncateText";
 import { Link } from "react-router-dom";
-const ItemTypes = {
-  CARD: "card",
-};
 
 const RecipeCard = ({ recipe }) => {
   const [{ isDragging }, drag] = useDrag({
     item: {
-      type: ItemTypes.CARD,
+      type: "card",
       data: recipe,
     },
     collect: (monitor) => ({

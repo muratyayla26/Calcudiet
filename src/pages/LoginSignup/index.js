@@ -18,11 +18,11 @@ export const LoginSignup = () => {
   const loginHandler = () => {
     authentication.signInWithEmailAndPassword(email, password).then((cred) => {
       if (cred) {
-        console.log("giris basarili");
+        //console.log("login successful");
         localStorage.setItem("userId", cred.user.uid);
         history.push("/user");
       } else {
-        console.log("giris yapilamadi");
+        //console.log("login failed");
       }
     });
   };
@@ -32,33 +32,41 @@ export const LoginSignup = () => {
       .createUserWithEmailAndPassword(email, password)
       .then((cred) => {
         if (cred) {
-          console.log("yeni uyelik acildi");
+          //console.log("signup successful");
           localStorage.setItem("userId", cred.user.uid);
           history.push("/user");
         } else {
-          console.log("yeni uyelik acilamadi");
+          //console.log("signup failed");
         }
       });
   };
 
   return (
     <div className={styles.container}>
-
       <div className={styles.inputContainer}>
-      <input className={styles.emailinput} onChange={emailChangeHandler} name="email" value={email} placeholder="E-mail" />
-      <input
-      className={styles.passwordinput}
-      type="password"
-      onChange={passwordChangeHandler}
-      name="password"
-      value={password}
-      placeholder="Password"
-      />
+        <input
+          className={styles.emailinput}
+          onChange={emailChangeHandler}
+          name="email"
+          value={email}
+          placeholder="E-mail"
+        />
+        <input
+          className={styles.passwordinput}
+          type="password"
+          onChange={passwordChangeHandler}
+          name="password"
+          value={password}
+          placeholder="Password"
+        />
       </div>
       <div className={styles.btnContainer}>
-
-      <button  className={styles.loginbtn}  onClick={loginHandler}>LOGIN</button>
-      <button  className={styles.signbtn} onClick={signupHandler}>SIGN UP</button>
+        <button className={styles.loginbtn} onClick={loginHandler}>
+          LOGIN
+        </button>
+        <button className={styles.signbtn} onClick={signupHandler}>
+          SIGN UP
+        </button>
       </div>
     </div>
   );

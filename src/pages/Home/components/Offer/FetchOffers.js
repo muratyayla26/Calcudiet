@@ -7,8 +7,8 @@ function FetchOffers() {
   const [offers, setOffers] = useState([]);
 
   useEffect(() => {
-    const key = process.env.REACT_APP_KEY;
-    const appid = process.env.REACT_APP_APPID;
+    const key = process.env.REACT_APP_EDAMAM_KEY;
+    const appid = process.env.REACT_APP_EDAMAM_ID;
     axios
       .get(
         `https://api.edamam.com/search?q=${select}&app_id=${appid}&app_key=${key}`

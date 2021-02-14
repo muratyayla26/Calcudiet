@@ -1,5 +1,5 @@
-//login olan kullanicinin ID'si ne kayıtlı tum verileri firestoredan
-//cagirdigimiz fonksiyon. Verileri bir arrayin icine atıp, o arrayi return ediyor.
+//this function returns all datas of a user
+//function parameter is only userId
 import { db } from "./firestore";
 
 export const getDataFromStore = async (ownerId) => {

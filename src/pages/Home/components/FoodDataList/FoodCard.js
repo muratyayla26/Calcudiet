@@ -1,7 +1,7 @@
 import { useEffect, useState, useContext } from "react";
 import Popup from "reactjs-popup";
 import styles from "./_foodDataList.module.scss";
-import "../Popups/homefoodpopup.css";
+import "../Popups/homefoodpopup.scss";
 import { Link } from "react-router-dom";
 import { addToStore } from "../../../../utility/addToStore";
 import { AuthContext } from "../../../../utility/AuthContext";
@@ -23,16 +23,16 @@ function FoodCard({ data }) {
     if (userId) {
       addToStore(data.recipe, userId).then((res) => {
         if (res) {
-          console.log("veri stora eklendi");
+          //console.log("data added successfully");
           setAddListMessage("Added");
         } else {
-          console.log("user var ancak veri daha once eklenmis");
+          //console.log("data already added to store);
           setAddListMessage("Already added");
         }
       });
     } else {
       setAddListMessage("Please login or sign up.");
-      console.log("user olmadigi icin stora eklenmemedi");
+      //console.log("user cannot found");
     }
   };
 

@@ -1,24 +1,19 @@
 import React, { useState, useEffect } from "react";
-import styles from "./singleDay.module.css";
+import styles from "./singleDay.module.scss";
 import { useDrop } from "react-dnd";
 import ProgressBar from "@ramonak/react-progress-bar";
 import { truncateText } from "../../../../utility/truncateText";
 
-const ItemTypes = {
-  CARD: "card",
-};
-
 const SingleDay = ({ data, setData, userCalory }) => {
-  // eslint-disable-next-line no-unused-vars
-  const [totalCal, setTotalCal] = useState(0);
   const [recCache, setRecCache] = useState({});
   const [{ isOver }, drop] = useDrop({
-    accept: ItemTypes.CARD,
+    accept: "card",
     drop: (item, monitor) => setRecCache(item.data),
     collect: (monitor) => ({
       isOver: !!monitor.isOver(),
     }),
   });
+
   useEffect(() => {
     if (recCache.name) {
       setData((prev) => {
@@ -36,7 +31,6 @@ const SingleDay = ({ data, setData, userCalory }) => {
         });
       });
     }
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [recCache]);
 
   const handlerRemove = (removedName) => {
@@ -52,7 +46,7 @@ const SingleDay = ({ data, setData, userCalory }) => {
           return {
             ...data,
             recipes: data.recipes.filter(
-              (recipe) => recipe.name !== removedName,
+              (recipe) => recipe.name !== removedName
             ),
             calory: data.calory - holder,
           };
@@ -62,8 +56,8 @@ const SingleDay = ({ data, setData, userCalory }) => {
       });
     });
   };
-
   const barPercent = parseInt((data.calory / userCalory) * 100);
+
   return (
     <div
       ref={drop}

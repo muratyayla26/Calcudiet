@@ -1,5 +1,4 @@
-// BMR, VKE ve günlük kalori gereksinimini hesaplar.
-
+//this function is used to calculate daily calory and body mass index
 export const bmrData = (weight, height, age, gender, pal) => {
   let palCoef;
   let genderCoef = (gender) => {
@@ -35,10 +34,7 @@ export const bmrData = (weight, height, age, gender, pal) => {
   }
 
   let bmr = 10 * weight + 6.25 * height - 5 * age + genderCoef(gender);
-
   let vke = parseInt((weight / (height / 100) ** 2).toFixed());
-
   const calories = parseInt((bmr * palCoef).toFixed());
-  console.log(calories, vke);
   return { calories, vke };
 };

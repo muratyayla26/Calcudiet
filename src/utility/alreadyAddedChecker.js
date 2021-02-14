@@ -1,6 +1,6 @@
-//verinin daha önce firestora eklenip eklenmediğini kontrol edeceğimiz fonksiyon
-//fonksiyon eğer true dönerse daha önce veri eklenmiş anlamina geliyor
-//fonksiyon false dönerse veri store daha önce eklenmemis anlamina geliyor.
+//this function checks whether data is already added to store or not
+//if function returns true it means that data is already added to the firestore
+//if function returns false it means that data isn't added to the firestore
 import { db } from "./firestore";
 
 export const alreadyAddedChecker = async (recipe, ownerId) => {
@@ -17,7 +17,7 @@ export const alreadyAddedChecker = async (recipe, ownerId) => {
       });
     checker = true;
   } catch (error) {
-    console.log("olmayan veri sorgusu hatasi");
+    //console.log("data couldn't found");
   }
   return checker;
 };

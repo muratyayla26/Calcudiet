@@ -1,5 +1,4 @@
-//kullanicinin firestore authenticaion kullanarak login olup olmadigini kontrol etmemizi
-//saglayan context yapisi
+//ContextApi is used to check login status of user
 import React, { useState, useEffect, createContext } from "react";
 import { authentication } from "./firestore";
 
@@ -12,7 +11,6 @@ export const AuthProvider = ({ children }) => {
   useEffect(() => {
     authentication.onAuthStateChanged((user) => {
       setCurrentUser(user);
-      //getuserdata firebase
       setUserData();
     });
   }, []);
