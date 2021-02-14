@@ -2,7 +2,6 @@
 import { db } from "./firestore";
 
 export const getUserInfo = async (ownerId) => {
-  let isExist = false;
   let output = {};
   try {
     await db
@@ -12,7 +11,6 @@ export const getUserInfo = async (ownerId) => {
       .then((res) => {
         output = res.docs[0].data();
       });
-    isExist = true;
     return output;
   } catch (error) {
     return (output = { calories: 1 });

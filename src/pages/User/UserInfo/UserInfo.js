@@ -6,7 +6,7 @@ import { userInfoUpdater } from "../../../utility/userInfoUpdater";
 import { getUserInfo } from "../../../utility/getUserInfo";
 
 export const UserInfo = () => {
-  const { currentUser, bioData, setBioData } = useContext(AuthContext);
+  const { currentUser} = useContext(AuthContext);
   const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
   const [userData, setUserData] = useState({});
   const [isChanged, setIsChanged] = useState(false);

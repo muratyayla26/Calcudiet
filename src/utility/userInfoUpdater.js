@@ -12,7 +12,7 @@ export const userInfoUpdater = async (updateData, ownerId) => {
       .where("ownerId", "==", `${ownerId}`)
       .get()
       .then((res) => {
-        //console.log("RESPONSE:", res.docs[0].data());
+        console.log("RESPONSE:", res.docs[0].data());
       });
     isExist = true;
   } catch (error) {
