@@ -6,15 +6,17 @@ import { userInfoUpdater } from "../../../utility/userInfoUpdater";
 import { getUserInfo } from "../../../utility/getUserInfo";
 
 export const UserInfo = () => {
-  const { currentUser} = useContext(AuthContext);
+  const { currentUser } = useContext(AuthContext);
   const userId = currentUser ? currentUser.uid : localStorage.getItem("userId");
   const [userData, setUserData] = useState({});
   const [isChanged, setIsChanged] = useState(false);
   const [dbData, setDbData] = useState({});
 
-  useEffect(async () => {
-    const myData = await getUserInfo(userId).then((res) => res);
-    setDbData(myData);
+  useEffect(() => {
+    (async () => {
+      const myData = await getUserInfo(userId).then((res) => res);
+      setDbData(myData);
+    })();
   }, []);
 
   const handleChange = (e) => {
